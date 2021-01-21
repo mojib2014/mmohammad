@@ -31,14 +31,18 @@
   </head>
   <body>
     <!-- Header Section -->
-    <header id="header" role="banner">
+    <header id="header">
       <div class="content">
         <a class="logo" href="index.html">Mojib</a>
         <nav class="desktop">
           <ul>
             <li><a class="topnav active" href="#about">about</a></li>
             <li><a class="topnav" href="#portfolio">portfolio</a></li>
-            <li><a class="topnav" href="#blog">blog</a></li>
+            <li>
+              <a class="topnav" href="https://my-blog-288121.web.app/topics"
+                >blog</a
+              >
+            </li>
             <li><a class="topnav" href="#contact">contact</a></li>
           </ul>
         </nav>
@@ -46,7 +50,11 @@
           <ul>
             <li><a class="topnav" href="#about">about</a></li>
             <li><a class="topnav" href="#portfolio">portfolio</a></li>
-            <li><a class="topnav" href="#blog">blog</a></li>
+            <li>
+              <a class="topnav" href="https://my-blog-288121.web.app/topics"
+                >blog</a
+              >
+            </li>
             <li><a class="topnav" href="#contact">contact</a></li>
           </ul>
         </nav>
@@ -140,8 +148,10 @@
               <p>
                 JavaScript | HTML5 | CSS3 | jQuery | MDN API | Anime.js | AJAX
               </p>
-              <a href="#github"><i class="fab fa-github-alt"></i></a>
-              <a href="#">live Project</a>
+              <div class="card-link">
+                <a href="#github"><i class="fab fa-github-alt"></i></a>
+                <a href="#">live Project</a>
+              </div>
             </div>
           </div>
           <div class="card">
@@ -154,12 +164,14 @@
               </p>
               <h3>Tech Stack</h3>
               <p>React.js | MongoDB | Node.js | Heruko, Git</p>
-              <a href="#github"><i class="fab fa-github-alt"></i></a>
-              <a href="#">live Project</a>
+              <div class="card-link">
+                <a href="#github"><i class="fab fa-github-alt"></i></a>
+                <a href="#">live Project</a>
+              </div>
             </div>
           </div>
           <div class="card">
-            <img src="images/portfolio/coders2.gif" alt="coders corner" />
+            <img src="images/portfolio/dent-soft.gif" alt="coders corner" />
             <div class="card-body">
               <h3>Dent Soft</h3>
               <p>
@@ -171,8 +183,10 @@
                 React.js | MongoDB | Node.js | Dropzone/Cloudinary | Google
                 Authentication | Reactstrap
               </p>
-              <a href="#github"><i class="fab fa-github-alt"></i></a>
-              <a href="#">live Project</a>
+              <div class="card-link">
+                <a href="#github"><i class="fab fa-github-alt"></i></a>
+                <a href="#">live Project</a>
+              </div>
             </div>
           </div>
           <div class="card">
@@ -185,8 +199,10 @@
               </p>
               <h3>Tech Stack</h3>
               <p>JavaScript | jQuery | Bootstrap</p>
-              <a href="#github"><i class="fab fa-github-alt"></i></a>
-              <a href="#">live Project</a>
+              <div class="card-link">
+                <a href="#github"><i class="fab fa-github-alt"></i></a>
+                <a href="#">live Project</a>
+              </div>
             </div>
           </div>
         </div>
@@ -234,7 +250,6 @@
             />
             <label for="message">Message</label>
             <textarea
-              type="text"
               name="message"
               id="message"
               rows="10"
@@ -243,7 +258,9 @@
               minlength="100"
               maxlength="200"
             ></textarea>
-            <input type="submit" value="Submit" />
+            <div class="submit-btn">
+              <input type="submit" value="Submit" />
+            </div>
           </form>
         </div>
       </section>

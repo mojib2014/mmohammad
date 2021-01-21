@@ -237,7 +237,10 @@ header .active {
     Home Section 
 ==============*/
 .home {
-  background: #4b5591 url("../images/about-bg.JPG") no-repeat top center;
+  background: #4b5591 url("../images/about-bg.JPG") no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
   background-attachment: fixed;
   background-blend-mode: multiply;
@@ -248,7 +251,7 @@ header .active {
 }
 
 .home .content {
-  padding: 16em 0 1em 0;
+  padding: 10em 0 1em 0;
   height: 100%;
 }
 
@@ -361,7 +364,12 @@ header .active {
   padding: 0.2em 0;
 }
 
-.card a {
+.card-link {
+  width: 100%;
+  text-align: center;
+}
+
+.card-link a {
   border: 1px solid var(--buttons-bg-color);
   border-radius: 5px;
   display: inline-block;
@@ -369,14 +377,15 @@ header .active {
   text-decoration: none;
   text-align: center;
   margin-top: 0.5em;
+  margin-left: 0.5em;
 }
 
-.card .fab {
+.card-link .fab {
   color: black;
   font-size: 20px;
 }
 
-.card a:hover {
+.card-link a:hover {
   background-color: var(--buttons-bg-color);
   color: #fff;
 }
@@ -442,13 +451,20 @@ textarea {
   margin: 1em 0;
 }
 
+.submit-btn {
+  max-width: 100%;
+  margin: auto;
+  text-align: center;
+}
+
 input[type="submit"] {
   background-color: #fff;
   border: none;
   border: 1px solid var(--buttons-bg-color);
   border-radius: 5px;
   color: #000;
-  width: 250px;
+  max-width: 250px;
+  min-width: 200px;
   padding: 1.5em 2em;
   text-transform: uppercase;
 }
