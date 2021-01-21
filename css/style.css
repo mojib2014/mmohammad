@@ -237,7 +237,7 @@ header .active {
     Home Section 
 ==============*/
 .home {
-  background: #4b5591 url("/images/about-bg.JPG") no-repeat top center;
+  background: #4b5591 url("images/about-bg.JPG") no-repeat top center;
   background-size: cover;
   background-attachment: fixed;
   background-blend-mode: multiply;
