@@ -33,15 +33,15 @@
     <!-- Header Section -->
     <header id="header">
       <div class="content">
-        <a class="logo" href="index.html">Mojib</a>
+        <a class="logo" href="index.html"
+          ><img src="images/logo.png" alt="portfolio logo"
+        /></a>
         <nav class="desktop">
           <ul>
             <li><a class="topnav active" href="#about">about</a></li>
             <li><a class="topnav" href="#portfolio">portfolio</a></li>
             <li>
-              <a class="topnav" href="https://my-blog-288121.web.app/topics"
-                >blog</a
-              >
+              <a href="https://my-blog-288121.web.app/topics">blog</a>
             </li>
             <li><a class="topnav" href="#contact">contact</a></li>
           </ul>
@@ -51,9 +51,7 @@
             <li><a class="topnav" href="#about">about</a></li>
             <li><a class="topnav" href="#portfolio">portfolio</a></li>
             <li>
-              <a class="topnav" href="https://my-blog-288121.web.app/topics"
-                >blog</a
-              >
+              <a href="https://my-blog-288121.web.app/topics">blog</a>
             </li>
             <li><a class="topnav" href="#contact">contact</a></li>
           </ul>
@@ -66,7 +64,7 @@
 
     <!-- Page Main Content -->
     <main id="main-content" class="main-content">
-      <!-- About Section -->
+      <!-- Home Section -->
       <section id="home" class="home active">
         <div class="content">
           <p class="greeting-message"></p>
@@ -75,7 +73,7 @@
             I'm a Oakland, CA based UX & UI developer focused on crafting clean
             & user-friendly experiences.
           </p>
-          <a href="#resume">download resume</a>
+          <a download="#" style="cursor: pointer">download resume</a>
         </div>
       </section>
 
@@ -85,25 +83,25 @@
           <h2 class="section-title">About Me</h2>
           <div class="flex-container">
             <div class="flex-item">
-              <img src="images/speedometer.svg" alt="speedometer icon" />
+              <img src="images/icons/speedometer.svg" alt="speedometer icon" />
               <h3>Fast</h3>
               <p>Fast load times my highest priority.</p>
             </div>
             <div class="flex-item">
               <img
-                src="images/cellphone-laptop.svg"
+                src="images/icons/cellphone-laptop.svg"
                 alt="cellphone link to laptop icon"
               />
               <h3>Responsiv</h3>
               <p>My layouts will work on any device, big or small.</p>
             </div>
             <div class="flex-item">
-              <img src="images/lamp.svg" alt="lamp icon" />
+              <img src="images/icons/lamp.svg" alt="lamp icon" />
               <h3>Intuitive</h3>
               <p>Strong preference for easy to use, intuitive UX/UI.</p>
             </div>
             <div class="flex-item">
-              <img src="images/rocket.svg" alt="rocket icon" />
+              <img src="images/icons/rocket.svg" alt="rocket icon" />
               <h3>Dynamic</h3>
               <p>
                 Websites don't have to be static, I love making pages come to
@@ -111,12 +109,21 @@
               </p>
             </div>
           </div>
-          <p>
-            I'm a Full-Stack software developer with 3 years of professional
-            experience. I do what I love to do, I build most of my projects in
-            React, when I have nothing to do I build facebook, youtube, etc
-            clone. I play vollyball and watch youtube toturials
-          </p>
+          <div class="about-details">
+            <div class="about-img">
+              <img src="images/about.jpg" alt="author in Yosemite park" />
+            </div>
+            <div class="about-paragraph">
+              <p>
+                I'm a Full-Stack software developer with 3 years of professional
+                experience. <br />
+                I do... what I love to do..., I build most of my projects in
+                React, when I don't have anything else to do, I create facebook,
+                youtube, etc clones. When I'm not coding, I usually play
+                vollyball, read books and watch youtube toturials.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -149,7 +156,7 @@
                 JavaScript | HTML5 | CSS3 | jQuery | MDN API | Anime.js | AJAX
               </p>
               <div class="card-link">
-                <a href="#github"><i class="fab fa-github-alt"></i></a>
+                <a href="#github"><i class="fab fa-github-square"></i></a>
                 <a href="#">live Project</a>
               </div>
             </div>
@@ -165,7 +172,7 @@
               <h3>Tech Stack</h3>
               <p>React.js | MongoDB | Node.js | Heruko, Git</p>
               <div class="card-link">
-                <a href="#github"><i class="fab fa-github-alt"></i></a>
+                <a href="#github"><i class="fab fa-github-square"></i></a>
                 <a href="#">live Project</a>
               </div>
             </div>
@@ -184,7 +191,7 @@
                 Authentication | Reactstrap
               </p>
               <div class="card-link">
-                <a href="#github"><i class="fab fa-github-alt"></i></a>
+                <a href="#github"><i class="fab fa-github-square"></i></a>
                 <a href="#">live Project</a>
               </div>
             </div>
@@ -200,7 +207,7 @@
               <h3>Tech Stack</h3>
               <p>JavaScript | jQuery | Bootstrap</p>
               <div class="card-link">
-                <a href="#github"><i class="fab fa-github-alt"></i></a>
+                <a href="#github"><i class="fab fa-github-square"></i></a>
                 <a href="#">live Project</a>
               </div>
             </div>
@@ -266,6 +273,8 @@
       </section>
     </main>
 
+    <!-- Footer Section -->
+    <footer></footer>
     <script src="js/index.js"></script>
   </body>
 </html>
