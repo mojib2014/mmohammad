@@ -9,6 +9,19 @@
   --color-grey-100: #dcdbdb;
 }
 
+/*===============
+  @keyframes
+===============*/
+@keyframes slideup {
+  0% {
+    transform: translateY(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 /*==============
     Font
 ================*/
@@ -251,12 +264,20 @@ nav a:hover {
   background-blend-mode: soft-light;
   color: #fff;
   text-align: center;
-  width: 100vw;
+  width: 100%;
   min-height: 100vh;
 }
 
+.home section {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
 .home .content {
-  padding: 16em 0 1em 0;
+  animation-duration: 0.5s;
+  animation-name: slideup;
+  padding: 14em 0 1em 0;
   height: 100%;
 }
 
@@ -268,6 +289,12 @@ nav a:hover {
 
 .home a {
   color: #fff;
+}
+
+@media only screen and (min-width: 1300px) {
+  .home .content {
+    padding-top: 18em;
+  }
 }
 
 /*======================
@@ -306,8 +333,8 @@ nav a:hover {
   max-width: 180px;
 }
 
-.about p {
-  padding: 1em 0;
+.about p:first-child {
+  padding-top: 1em;
 }
 
 .about-details {
@@ -315,6 +342,7 @@ nav a:hover {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  padding-top: 3em;
 }
 
 .about-img {
@@ -452,10 +480,6 @@ nav a:hover {
   }
 }
 
-/*==============
-    Blog Section 
-===============*/
-
 /*================
     Contact Section
 =================*/
@@ -480,7 +504,8 @@ nav a:hover {
 }
 
 .contact p,
-.contact h2 {
+.contact h2,
+.contact h3 {
   text-align: center;
 }
 
@@ -513,6 +538,7 @@ input[type="submit"] {
   border: 1px solid var(--buttons-bg-color);
   border-radius: 5px;
   color: #000;
+  cursor: pointer;
   width: 25%;
   max-width: 250px;
   height: auto;
@@ -533,4 +559,104 @@ input[type="submit"]:hover {
     height: auto;
     padding: 1.5em 2em;
   }
+}
+
+/*=================
+  Footer 
+==================*/
+footer {
+  background-color: #252525;
+  color: gray;
+  font-size: 0.8em;
+  width: 100%;
+  padding: 7em 0;
+  text-align: center;
+}
+
+footer p {
+  width: 90%;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 1em 0;
+}
+
+.copyright-author {
+  color: var(--buttons-bg-color);
+}
+
+footer .fa-heart {
+  color: red;
+}
+
+footer .content {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+footer a {
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.2);
+  color: gray;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 0.8em;
+  padding: 0.5em;
+  justify-content: space-around;
+  margin: 0.5em 0;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+footer a i {
+  flex: 10%;
+}
+
+footer .fab {
+  font-size: 20px;
+  padding-right: 0.5em;
+}
+
+.github i {
+  color: black;
+}
+
+.twitter i {
+  color: #1ea2f1;
+}
+
+.linkedin i {
+  color: #0c65c2;
+}
+
+.facebook i {
+  color: #0e92f3;
+}
+
+.github:hover {
+  background-color: black;
+  color: #fff;
+}
+
+.linkedin:hover {
+  background-color: #0c65c2;
+  color: #fff;
+}
+
+.twitter:hover {
+  background-color: #1ea2f1;
+  color: #fff;
+}
+
+.facebook:hover {
+  background-color: #0e92f3;
+  color: #fff;
+}
+
+footer a:hover i {
+  color: #fff;
+}
+
+.social:hover {
 }

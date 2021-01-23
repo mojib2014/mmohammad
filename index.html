@@ -2,7 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0 maximum-scale=1, user-scalable=no"
+    />
     <meta
       name="description"
       content="Portfolio of Mojib Mohammad - designer and developer specialized in designing web and mobile interfaces."
@@ -16,7 +19,12 @@
     <title>Mojib Mohammad | UI &amp; UX designer</title>
 
     <!-- Portfolio Icon -->
-    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      href="images/logo.png"
+      style="width: 50px"
+    />
 
     <!-- Fontawesome CDN-->
     <link
@@ -70,10 +78,12 @@
           <p class="greeting-message"></p>
           <h1>I'm Mojib Mohammad</h1>
           <p>
-            I'm a Oakland, CA based UX & UI developer focused on crafting clean
+            I'm an Oakland, CA based UX & UI designer focused on crafting clean
             & user-friendly experiences.
           </p>
-          <a download="#" style="cursor: pointer">download resume</a>
+          <a href="images/resume.pdf" style="cursor: pointer"
+            >download resume</a
+          >
         </div>
       </section>
 
@@ -92,7 +102,7 @@
                 src="images/icons/cellphone-laptop.svg"
                 alt="cellphone link to laptop icon"
               />
-              <h3>Responsiv</h3>
+              <h3>Responsive</h3>
               <p>My layouts will work on any device, big or small.</p>
             </div>
             <div class="flex-item">
@@ -116,11 +126,17 @@
             <div class="about-paragraph">
               <p>
                 I'm a Full-Stack software developer with 3 years of professional
-                experience. <br />
-                I do... what I love to do..., I build most of my projects in
-                React, when I don't have anything else to do, I create facebook,
-                youtube, etc clones. When I'm not coding, I usually play
-                vollyball, read books and watch youtube toturials.
+                experience.
+              </p>
+              <p>I do... what I love to do...</p>
+              <p>I build most of my projects with React.</p>
+              <p>
+                when I don't have anything else to do, I create facebook,
+                instagram, youtube clones.
+              </p>
+              <p>
+                When I'm not coding, I usually play vollyball, read books and
+                watch youtube toturials.
               </p>
             </div>
           </div>
@@ -212,15 +228,44 @@
               </div>
             </div>
           </div>
+          <div class="card">
+            <img
+              src="images/portfolio/shoping-cart.png"
+              alt="Comfy House (website name)"
+            />
+            <div class="card-body">
+              <h3>Comfy House</h3>
+              <p>A simple ecomerce shopping cart</p>
+              <h3>Tech Stack</h3>
+              <p>JavaScript | jQuery | HTML5 | CSS3</p>
+              <div class="card-link">
+                <a href="#github"><i class="fab fa-github-square"></i></a>
+                <a href="https://vanilla-js-shoping-cart.netlify.app/"
+                  >live Project</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <img src="images/portfolio/issueTracker.png" alt="coders corner" />
+            <div class="card-body">
+              <h3>Issue Tracker</h3>
+              <p>
+                A simple web app for tracking issues with persistant data using
+                localstorage(browser).
+              </p>
+              <h3>Tech Stack</h3>
+              <p>React | Local Storage(browser)</p>
+              <div class="card-link">
+                <a href="#github"><i class="fab fa-github-square"></i></a>
+                <a href="https://codesandbox.io/s/react-issue-tracker-b2b46"
+                  >live Project</a
+                >
+              </div>
+            </div>
+          </div>
         </div>
       </section>
-
-      <!-- Blog Section -->
-      <!-- <section id="blog" class="blog">
-        <div class="content">
-          <a href="#blog">Blog</a>
-        </div>
-      </section> -->
 
       <!-- Contact Section -->
       <section id="contact" class="contact">
@@ -274,7 +319,26 @@
     </main>
 
     <!-- Footer Section -->
-    <footer></footer>
+    <footer>
+      <p>
+        &copy;2020 <span class="copyright-author">Mojib Mohammad</span>. Built
+        with a little JavaScript and <i class="fas fa-heart"></i> in Oakland, CA
+      </p>
+      <div class="content">
+        <a href="" class="github"
+          ><i class="fab fa-github-square"></i>Follow me on github</a
+        >
+        <a href="" class="linkedin"
+          ><i class="fab fa-linkedin-in"></i>Follow me on linkedin</a
+        >
+        <a href="" class="twitter"
+          ><i class="fab fa-twitter-square"></i>Follow me on twitter</a
+        >
+        <a href="" class="facebook"
+          ><i class="fab fa-facebook-f"></i>Follow me on facebook</a
+        >
+      </div>
+    </footer>
     <script src="js/index.js"></script>
   </body>
 </html>
