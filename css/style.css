@@ -255,13 +255,14 @@ nav a:hover {
     Home Section 
 ==============*/
 .home {
-  background: #424c87 url("../images/about-bg.JPG") no-repeat center center;
+  background: rgba(56, 53, 53, 0.6) url("../images/about-bg.JPG") no-repeat
+    center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
   background-attachment: fixed;
-  background-blend-mode: soft-light;
+  background-blend-mode: saturation;
   color: #fff;
   text-align: center;
   width: 100%;
@@ -279,6 +280,7 @@ nav a:hover {
   animation-name: slideup;
   padding: 14em 0 1em 0;
   height: 100%;
+  opacity: 1;
 }
 
 .greeting-message {
@@ -338,11 +340,12 @@ nav a:hover {
 }
 
 .about-details {
+  background-color: lightblue;
   align-items: center;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding-top: 3em;
+  padding: 3em 1em 2em 1em;
 }
 
 .about-img {
@@ -484,7 +487,7 @@ nav a:hover {
     Contact Section
 =================*/
 .contact {
-  background-color: #252934;
+  background-color: #3d4250;
   color: #fff;
   position: relative;
   padding-top: 175px;
@@ -533,11 +536,11 @@ textarea {
 }
 
 input[type="submit"] {
-  background-color: #fff;
+  background-color: #1e242c;
   border: none;
-  border: 1px solid var(--buttons-bg-color);
+  border: 1px solid #1e242c;
   border-radius: 5px;
-  color: #000;
+  color: #fff;
   cursor: pointer;
   width: 25%;
   max-width: 250px;
@@ -549,6 +552,7 @@ input[type="submit"] {
 
 input[type="submit"]:hover {
   background-color: var(--buttons-bg-color);
+  border-color: var(--buttons-bg-color);
   color: #fff;
 }
 
@@ -557,7 +561,9 @@ input[type="submit"]:hover {
     width: 100%;
     max-width: 100%;
     height: auto;
-    padding: 1.5em 2em;
+    -webkit-padding-start: 2em;
+    -moz-padding: 2em;
+    padding: 2em;
   }
 }
 
@@ -616,10 +622,6 @@ footer a i {
 footer .fab {
   font-size: 20px;
   padding-right: 0.5em;
-}
-
-.github i {
-  color: black;
 }
 
 .twitter i {
