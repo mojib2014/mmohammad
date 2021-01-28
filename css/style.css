@@ -427,7 +427,6 @@ nav a:hover {
 .portfolio-card-container {
   align-items: unset;
   padding-top: 1em;
-  transition: all 0.8s ease;
 }
 
 .card {
