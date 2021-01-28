@@ -1,0 +1,122 @@
+export const projects = [
+  {
+    title: "Coders Corner",
+    description:
+      "Asimple application for improving coding(software development) Skills.",
+    techStackTitle: "Tech Stack",
+    techStack: "JavaScript | HTML5 | CSS3 | jQuery | MDN API | Anime.js | AJAX",
+    projectUrl: "https://putincake.github.io/Coders-Corner/",
+    githubUrl: "https://github.com/mojib2014/Coders-Corner",
+    projectImg: "../images/portfolio/coderscorner.gif",
+    language: "javascript",
+  },
+  {
+    title: "Dent Soft",
+    description:
+      "Dent Soft (DS) is a streamlined and standardized electronic system specially designed for multiple users in dental clinics",
+    techStackTitle: "Tech Stack",
+    techStack:
+      "React.js | MongoDB | Node.js | Dropzone/Cloudinary | Google Authentication | Reactstrap",
+    projectUrl: "https://dent-soft.herokuapp.com/",
+    githubUrl: "https://github.com/mojib2014/dent-soft",
+    projectImg: "../images/portfolio/dent-soft.gif",
+    language: "MERN",
+  },
+  {
+    title: "Vidly Movie App",
+    description:
+      "A simple movie app that allows you to sort by genre by title etc, like/dislike, pagination, and user authentication.",
+    techStackTitle: "Tech Stack",
+    techStack: "React.js | MongoDB | Node.js | Heruko, Git",
+    projectUrl: "https://enigmatic-forest-05440.herokuapp.com/movies",
+    githubUrl: "#",
+    projectImg: "../images/portfolio/vidly.png",
+    language: "MERN",
+  },
+  {
+    title: "Star Wars RPG",
+    description:
+      "A simple multiplayer swords game built with JavaScript, Bootstrap, jQuery.",
+    techStackTitle: "Tech Stack",
+    techStack: "JavaScript | jQuery | Bootstrap",
+    projectUrl: "https://mojib2014.github.io/Unit-4-Game/",
+    githubUrl: "https://github.com/mojib2014/Unit-4-Game",
+    projectImg: "../images/portfolio/starwar.png",
+    language: "javascript",
+  },
+  {
+    title: "Comfy House",
+    description: "A simple ecomerce shopping cart",
+    techStackTitle: "Tech Stack",
+    techStack: "JavaScript | jQuery | HTML5 | CSS3",
+    projectUrl: "https://vanilla-js-shoping-cart.netlify.app/",
+    githubUrl: "#",
+    projectImg: "../images/portfolio/comfyhouse.png",
+    language: "javascript",
+  },
+  {
+    title: "Issue Tracker",
+    description:
+      "A simple web app for tracking issues with persistant data using localstorage(browser).",
+    techStackTitle: "Tech Stack",
+    techStack: "React | Local Storage(browser)",
+    projectUrl: "https://codesandbox.io/s/react-issue-tracker-b2b46",
+    githubUrl: "https://codesandbox.io/s/react-issue-tracker-b2b46",
+    projectImg: "../images/portfolio/issueTracker.png",
+    language: "react",
+  },
+  {
+    title: "Counter App",
+    description: "A simple web shopping cart like app build with react.",
+    techStackTitle: "Tech Stack",
+    techStack: "React | Bootstrap | Fontawesome",
+    projectUrl: "https://codesandbox.io/s/counter-app-6g8j6?file=/package.json",
+    githubUrl: "https://codesandbox.io/s/counter-app-6g8j6?file=/package.json",
+    projectImg: "../images/portfolio/counter.png",
+    language: "react",
+  },
+  {
+    title: "My Train Scheduler",
+    description:
+      "A simple web app that allows you to schedule and check the status of your train.",
+    techStackTitle: "Tech Stack",
+    techStack: "JavaScript | HTML5 | CSS3 | Git | Firebase",
+    projectUrl: "https://mojib2014.github.io/Train-Scheduler/",
+    githubUrl: "https://github.com/mojib2014/Train-Scheduler",
+    projectImg: "../images/portfolio/trainScheduler.png",
+    language: "javascript",
+  },
+  {
+    title: "Crystal Collector",
+    description:
+      "You will be given a random number at the start of the game. There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score.",
+    techStackTitle: "Tech Stack",
+    techStack: "JavaScript | jQuery | Bootstrap",
+    projectUrl: "https://mojib2014.github.io/Crystal-Collector-Game/",
+    githubUrl: "https://github.com/mojib2014/Crystal-Collector-Game",
+    projectImg: "../images/portfolio/crystalCollector.png",
+    language: "javascript",
+  },
+  {
+    title: "Movie",
+    description:
+      "A simple movie app that allows you to sort by genre by title etc, like/dislike, pagination, and user authentication.",
+    techStackTitle: "Tech Stack",
+    techStack: "React.js | MongoDB | Node.js | Heruko, Git",
+    projectUrl: "https://enigmatic-forest-05440.herokuapp.com/movies",
+    githubUrl: "#",
+    projectImg: "../images/portfolio/vidly.png",
+    language: "MERN",
+  },
+  {
+    title: "Vidly Movie App",
+    description:
+      "A simple movie app that allows you to sort by genre by title etc, like/dislike, pagination, and user authentication.",
+    techStackTitle: "Tech Stack",
+    techStack: "React.js | MongoDB | Node.js | Heruko, Git",
+    projectUrl: "https://enigmatic-forest-05440.herokuapp.com/movies",
+    githubUrl: "#",
+    projectImg: "../images/portfolio/vidly.png",
+    language: "MERN",
+  },
+];

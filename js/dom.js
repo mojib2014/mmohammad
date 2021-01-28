@@ -5,12 +5,13 @@ const topnav = document.querySelectorAll(".topnav");
 const mobile = document.querySelector(".mobile");
 const humburger = document.querySelector(".humburger");
 const mainContent = document.querySelector("#main-content");
+const backToTopBtn = document.querySelector(".back-to-top");
 
 // Greeting Function
 const greet = () => {
   let greeting;
   const time = new Date().getHours();
-  if (time < 10) greeting = "Morning";
+  if (time < 11) greeting = "Morning";
   else if (time < 20) greeting = "Day";
   else greeting = "Evening";
   greetingMessage.textContent = `Hello There, Good ${greeting}!`;
@@ -19,17 +20,23 @@ const greet = () => {
 greet();
 
 // ****************** Events *******************
-// Scroll Events
+
+// ********* Scroll Events *********
 window.onscroll = function () {
   stickyHeader();
 };
 function stickyHeader() {
-  if (window.pageYOffset > 450) {
+  if (
+    document.body.scrollTop > 450 ||
+    document.documentElement.scrollTop > 450
+  ) {
     header.classList.add("sticky");
     humburger.style.color = "#000";
+    backToTopBtn.style.display = "block";
   } else {
     header.classList.remove("sticky");
     humburger.style.color = "#fff";
+    backToTopBtn.style.display = "none";
   }
 }
 
@@ -52,6 +59,7 @@ function smoothScroll(event) {
 }
 
 // ******************* Click Events *******************
+
 // If anywhere in main content has been clicked hide the mobile navbar
 mainContent.onclick = function () {
   mobile.style.display = "none";
@@ -76,4 +84,22 @@ for (let i = 0; i < topnav.length; i++) {
     current[0].className = current[0].className.replace(" active", "");
     this.className += " active";
   });
+}
+
+// Back To Top button Click event
+backToTopBtn.onclick = function () {
+  scrollToTop();
+};
+
+function scrollToTop() {
+  if (
+    document.body.scrollTop > 500 ||
+    document.documentElement.scrollTop > 500
+  ) {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+    window.requestAnimationFrame(() =>
+      window.scrollTo({ top: 0, behavior: "smooth" }),
+    );
+  }
 }

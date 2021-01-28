@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta
       name="viewport"
-      content="width=device-width, initial-scale=1.0 maximum-scale=1, user-scalable=no"
+      content="width=device-width, initial-scale=1.0 maximum-scale=1"
     />
     <meta
       name="description"
@@ -24,6 +24,13 @@
       type="image/png"
       href="images/logo.png"
       style="width: 50px"
+    />
+
+    <!-- Montserrat Font (Google Fonts) -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap"
+      rel="stylesheet"
     />
 
     <!-- Fontawesome CDN-->
@@ -46,7 +53,7 @@
         /></a>
         <nav class="desktop">
           <ul>
-            <li><a class="topnav active" href="#about">about</a></li>
+            <li><a class="topnav" href="#about">about</a></li>
             <li><a class="topnav" href="#portfolio">portfolio</a></li>
             <li>
               <a href="https://my-blog-288121.web.app/topics">blog</a>
@@ -154,13 +161,18 @@
             to create great product with client goals in mind.
           </p>
         </div>
-        <div
-          class="content portfolio-cards"
-          data-aos="fade-up"
-          data-aos-duration="2000"
-        >
-          <div class="card">
-            <img src="images/portfolio/coderscorner.gif" alt="coders corner" />
+        <div class="content filter-btn-container">
+          <div class="filter active" data-filter="all">All</div>
+          <div class="filter" data-filter="javascript">JavaScript</div>
+          <div class="filter" data-filter="react">React.js</div>
+          <div class="filter" data-filter="MERN">MERN</div>
+        </div>
+        <div class="content portfolio-card-container">
+          <div class="card javascript">
+            <img
+              alt="Coders Corner"
+              src="../images/portfolio/coderscorner.gif"
+            />
             <div class="card-body">
               <h3>Coders Corner</h3>
               <p>
@@ -173,34 +185,15 @@
               </p>
               <div class="card-link">
                 <a href="https://github.com/mojib2014/Coders-Corner"
-                  ><i class="fab fa-github-square"></i
-                ></a>
-                <a href="https://putincake.github.io/Coders-Corner/"
-                  >live Project</a
+                  ><i class="fab fa-github-square"></i></a
+                ><a href="https://putincake.github.io/Coders-Corner/"
+                  >Live Project</a
                 >
               </div>
             </div>
           </div>
-          <div class="card">
-            <img src="images/portfolio/vidly.png" alt="coders corner" />
-            <div class="card-body">
-              <h3>Vidly Movie App</h3>
-              <p>
-                A simple movie app that allows you to sort by genre by title
-                etc, like/dislike, pagination, and user authentication.
-              </p>
-              <h3>Tech Stack</h3>
-              <p>React.js | MongoDB | Node.js | Heruko, Git</p>
-              <div class="card-link">
-                <a href="#github"><i class="fab fa-github-square"></i></a>
-                <a href="https://enigmatic-forest-05440.herokuapp.com/movies"
-                  >live Project</a
-                >
-              </div>
-            </div>
-          </div>
-          <div class="card">
-            <img src="images/portfolio/dent-soft.gif" alt="coders corner" />
+          <div class="card MERN">
+            <img alt="Dent Soft" src="../images/portfolio/dent-soft.gif" />
             <div class="card-body">
               <h3>Dent Soft</h3>
               <p>
@@ -214,14 +207,31 @@
               </p>
               <div class="card-link">
                 <a href="https://github.com/mojib2014/dent-soft"
-                  ><i class="fab fa-github-square"></i
-                ></a>
-                <a href="https://dent-soft.herokuapp.com/">live Project</a>
+                  ><i class="fab fa-github-square"></i></a
+                ><a href="https://dent-soft.herokuapp.com/">Live Project</a>
               </div>
             </div>
           </div>
-          <div class="card">
-            <img src="images/portfolio/starwar.png" alt="coders corner" />
+          <div class="card MERN">
+            <img alt="Vidly Movie App" src="../images/portfolio/vidly.png" />
+            <div class="card-body">
+              <h3>Vidly Movie App</h3>
+              <p>
+                A simple movie app that allows you to sort by genre by title
+                etc, like/dislike, pagination, and user authentication.
+              </p>
+              <h3>Tech Stack</h3>
+              <p>React.js | MongoDB | Node.js | Heruko, Git</p>
+              <div class="card-link">
+                <a href="#"><i class="fab fa-github-square"></i></a
+                ><a href="https://enigmatic-forest-05440.herokuapp.com/movies"
+                  >Live Project</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="card javascript">
+            <img alt="Star Wars RPG" src="../images/portfolio/starwar.png" />
             <div class="card-body">
               <h3>Star Wars RPG</h3>
               <p>
@@ -232,34 +242,33 @@
               <p>JavaScript | jQuery | Bootstrap</p>
               <div class="card-link">
                 <a href="https://github.com/mojib2014/Unit-4-Game"
-                  ><i class="fab fa-github-square"></i
-                ></a>
-                <a href="https://mojib2014.github.io/Unit-4-Game/"
-                  >live Project</a
+                  ><i class="fab fa-github-square"></i></a
+                ><a href="https://mojib2014.github.io/Unit-4-Game/"
+                  >Live Project</a
                 >
               </div>
             </div>
           </div>
-          <div class="card">
-            <img
-              src="images/portfolio/comfyhouse.png"
-              alt="Comfy House (website name)"
-            />
+          <div class="card javascript">
+            <img alt="Comfy House" src="../images/portfolio/comfyhouse.png" />
             <div class="card-body">
               <h3>Comfy House</h3>
               <p>A simple ecomerce shopping cart</p>
               <h3>Tech Stack</h3>
               <p>JavaScript | jQuery | HTML5 | CSS3</p>
               <div class="card-link">
-                <a href="#github"><i class="fab fa-github-square"></i></a>
-                <a href="https://vanilla-js-shoping-cart.netlify.app/"
-                  >live Project</a
+                <a href="#"><i class="fab fa-github-square"></i></a
+                ><a href="https://vanilla-js-shoping-cart.netlify.app/"
+                  >Live Project</a
                 >
               </div>
             </div>
           </div>
-          <div class="card">
-            <img src="images/portfolio/issueTracker.png" alt="coders corner" />
+          <div class="card react">
+            <img
+              alt="Issue Tracker"
+              src="../images/portfolio/issueTracker.png"
+            />
             <div class="card-body">
               <h3>Issue Tracker</h3>
               <p>
@@ -269,36 +278,39 @@
               <h3>Tech Stack</h3>
               <p>React | Local Storage(browser)</p>
               <div class="card-link">
-                <a href="#github"><i class="fab fa-github-square"></i></a>
                 <a href="https://codesandbox.io/s/react-issue-tracker-b2b46"
-                  >live Project</a
+                  ><i class="fab fa-github-square"></i></a
+                ><a href="https://codesandbox.io/s/react-issue-tracker-b2b46"
+                  >Live Project</a
                 >
               </div>
             </div>
           </div>
-          <div class="card">
-            <img src="images/portfolio/counter.png" alt="coders corner" />
+          <div class="card react">
+            <img alt="Counter App" src="../images/portfolio/counter.png" />
             <div class="card-body">
               <h3>Counter App</h3>
-              <p>A simple web shopping cart like app build with react .</p>
+              <p>A simple web shopping cart like app build with react.</p>
               <h3>Tech Stack</h3>
               <p>React | Bootstrap | Fontawesome</p>
               <div class="card-link">
-                <a href="#github"><i class="fab fa-github-square"></i></a>
                 <a
                   href="https://codesandbox.io/s/counter-app-6g8j6?file=/package.json"
-                  >live Project</a
+                  ><i class="fab fa-github-square"></i></a
+                ><a
+                  href="https://codesandbox.io/s/counter-app-6g8j6?file=/package.json"
+                  >Live Project</a
                 >
               </div>
             </div>
           </div>
-          <div class="card">
+          <div class="card javascript">
             <img
-              src="images/portfolio/trainScheduler.png"
-              alt="coders corner"
+              alt="My Train Scheduler"
+              src="../images/portfolio/trainScheduler.png"
             />
             <div class="card-body">
-              <h3>My Train Schedule</h3>
+              <h3>My Train Scheduler</h3>
               <p>
                 A simple web app that allows you to schedule and check the
                 status of your train.
@@ -307,18 +319,17 @@
               <p>JavaScript | HTML5 | CSS3 | Git | Firebase</p>
               <div class="card-link">
                 <a href="https://github.com/mojib2014/Train-Scheduler"
-                  ><i class="fab fa-github-square"></i
-                ></a>
-                <a href="https://mojib2014.github.io/Train-Scheduler/"
-                  >live Project</a
+                  ><i class="fab fa-github-square"></i></a
+                ><a href="https://mojib2014.github.io/Train-Scheduler/"
+                  >Live Project</a
                 >
               </div>
             </div>
           </div>
-          <div class="card">
+          <div class="card javascript">
             <img
-              src="images/portfolio/crystalCollector.png"
-              alt="coders corner"
+              alt="Crystal Collector"
+              src="../images/portfolio/crystalCollector.png"
             />
             <div class="card-body">
               <h3>Crystal Collector</h3>
@@ -331,10 +342,45 @@
               <p>JavaScript | jQuery | Bootstrap</p>
               <div class="card-link">
                 <a href="https://github.com/mojib2014/Crystal-Collector-Game"
-                  ><i class="fab fa-github-square"></i
-                ></a>
-                <a href="https://mojib2014.github.io/Crystal-Collector-Game/"
-                  >live Project</a
+                  ><i class="fab fa-github-square"></i></a
+                ><a href="https://mojib2014.github.io/Crystal-Collector-Game/"
+                  >Live Project</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="card MERN">
+            <img alt="Movie" src="../images/portfolio/vidly.png" />
+            <div class="card-body">
+              <h3>Movie</h3>
+              <p>
+                A simple movie app that allows you to sort by genre by title
+                etc, like/dislike, pagination, and user authentication.
+              </p>
+              <h3>Tech Stack</h3>
+              <p>React.js | MongoDB | Node.js | Heruko, Git</p>
+              <div class="card-link">
+                <a href="#"><i class="fab fa-github-square"></i></a
+                ><a href="https://enigmatic-forest-05440.herokuapp.com/movies"
+                  >Live Project</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="card MERN">
+            <img alt="Vidly Movie App" src="../images/portfolio/vidly.png" />
+            <div class="card-body">
+              <h3>Vidly Movie App</h3>
+              <p>
+                A simple movie app that allows you to sort by genre by title
+                etc, like/dislike, pagination, and user authentication.
+              </p>
+              <h3>Tech Stack</h3>
+              <p>React.js | MongoDB | Node.js | Heruko, Git</p>
+              <div class="card-link">
+                <a href="#"><i class="fab fa-github-square"></i></a
+                ><a href="https://enigmatic-forest-05440.herokuapp.com/movies"
+                  >Live Project</a
                 >
               </div>
             </div>
@@ -416,7 +462,9 @@
           ><i class="fab fa-facebook-f"></i>Follow me on facebook</a
         >
       </div>
+      <i class="fas fa-angle-double-up back-to-top"></i>
     </footer>
-    <script src="js/index.js"></script>
+    <script src="js/dom.js"></script>
+    <script type="module" src="js/renderProjects.js"></script>
   </body>
 </html>
