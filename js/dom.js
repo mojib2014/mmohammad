@@ -1,6 +1,7 @@
 // DOM Elements
 const greetingMessage = document.querySelector(".greeting-message");
 const header = document.getElementById("header");
+const sections = document.querySelectorAll("section[id]");
 const topnav = document.querySelectorAll(".topnav");
 const mobile = document.querySelector(".mobile");
 const humburger = document.querySelector(".humburger");
@@ -47,8 +48,8 @@ topnav.forEach((elem) => elem.addEventListener("click", smoothScroll));
 
 function smoothScroll(event) {
   event.preventDefault();
-  const targetId = this.getAttribute("href");
-  const target = document.querySelector(targetId);
+  const targetHref = this.getAttribute("href");
+  const target = document.querySelector(targetHref);
   const headerOffset = 10;
   const elementPosition = target.offsetTop;
   const offsetPosition = elementPosition - headerOffset;
@@ -68,7 +69,7 @@ mainContent.onclick = function () {
   mobile.style.display = "none";
 };
 
-// When mobile nav menu has been clicked and page has scrolled
+// When mobile nav menus has been clicked and page has scrolled
 // to that part hide the mobile menu
 function hideMobileMenu() {
   mobile.style.display = "none";
@@ -80,7 +81,7 @@ humburger.addEventListener("click", () => {
   else mobile.style.display = "block";
 });
 
-// Header active class function
+// Header menus active class function
 determinActiveClass(topnav);
 
 function determinActiveClass(element) {
@@ -91,6 +92,33 @@ function determinActiveClass(element) {
       this.className += " active";
     });
   }
+}
+
+// Menus active class on scroll
+window.addEventListener("scroll", navHighlighter);
+function navHighlighter() {
+  // Get current scroll position
+  let scrollY = window.pageYOffset;
+
+  // Now we loop through sections to get height, top and ID values for each
+  sections.forEach((current) => {
+    const sectionHeight = current.offsetHeight;
+    const sectionTop = current.offsetTop - 50;
+    sectionId = current.getAttribute("id");
+    /*
+    - If our current scroll position enters the space where current section on screen is, add .active class to corresponding navigation link, else remove it
+    - To know which link needs an active class, we use sectionId variable we are getting while looping through sections as an selector
+    */
+    if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+      document
+        .querySelector(".desktop a[href*=" + sectionId + "]")
+        .classList.add("active");
+    } else {
+      document
+        .querySelector("header .desktop a[href*=" + sectionId + "]")
+        .classList.remove("active");
+    }
+  });
 }
 
 // Back To Top button Click event
