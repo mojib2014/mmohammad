@@ -2,10 +2,23 @@
     Variables 
 *************/
 :root {
-  --light-black: #454545;
-  --white-shade: #fff;
+  --black: black;
+  --black-shade: #3d4350;
+  --box-shadow-color: rgba(0, 0, 0, 0.16);
   --blude-shade: #26b;
+  --card-border-color: #dadce0;
+  --dark-black: #1e242c;
+  --footer-bg-color: #252525;
+  --greetin-msg-color: rgb(255, 255, 0);
+  --gray: gray;
+  --home-bg-color: rgba(9, 9, 9, 0.6);
+  --light-black: #454545;
+  --lightblue: lightblue;
   --light-gray: #ddd;
+  --red: red;
+  --white-shade: #fff;
+  --white-shade-lighter: #f8f8f8;
+  --webkit-box-shadow-color: ;
 }
 
 /*===============
@@ -80,7 +93,7 @@ footer .content {
 }
 
 .section-title {
-  border-bottom: 4px solid #444649;
+  border-bottom: 4px solid var(--light-black);
   padding-bottom: 0.5em;
   margin: auto;
 }
@@ -89,6 +102,11 @@ footer .content {
 .portfolio,
 .contact {
   padding: 4em 0;
+}
+
+.about,
+.portfolio {
+  clip-path: polygon(0 0, 100% 8vw, 100% calc(100% - 8vw), 0 100%);
 }
 
 .content h2 {
@@ -101,13 +119,13 @@ footer .content {
 }
 
 main a {
-  color: #000;
+  color: var(--light-black);
 }
 
 .home a {
   border: 1px solid var(--blude-shade);
   border-radius: 5px;
-  color: #000;
+  color: var(--light-black);
   display: block;
   margin: auto;
   max-width: 250px;
@@ -119,7 +137,7 @@ main a {
 
 .home a:hover {
   background-color: var(--blude-shade);
-  color: #fff;
+  color: var(--white-shade);
 }
 
 img {
@@ -168,7 +186,7 @@ header {
 }
 
 .sticky a {
-  color: #000;
+  color: var(--light-black);
 }
 
 header .content {
@@ -177,7 +195,7 @@ header .content {
 }
 
 header a {
-  color: #fff;
+  color: var(--white-shade);
   text-decoration: none;
   text-transform: uppercase;
 }
@@ -208,7 +226,7 @@ header .active {
 }
 
 .mobile {
-  background-color: #f8f8f8;
+  background-color: var(--white-shade-lighter);
   border-top: 2px solid var(--blude-shade);
   position: absolute;
   top: 60px;
@@ -229,11 +247,11 @@ header .active {
 }
 
 .mobile a {
-  color: #000;
+  color: var(--light-black);
 }
 
 .humburger {
-  color: #fff;
+  color: var(--white-shade);
   cursor: pointer;
   font-size: 25px;
 }
@@ -256,7 +274,7 @@ nav a:hover {
     Home Section 
 ==============*/
 .home {
-  background-color: rgba(9, 9, 9, 0.6);
+  background-color: var(--home-bg-color);
   background-image: url("../images/about-bg-img.JPG");
   background-repeat: no-repeat;
   background-position: center;
@@ -266,7 +284,7 @@ nav a:hover {
   background-size: cover;
   background-attachment: fixed;
   background-blend-mode: multiply;
-  color: #fff;
+  color: var(--white-shade);
   text-align: center;
   width: 100%;
   min-height: 100vh;
@@ -283,11 +301,11 @@ nav a:hover {
 .greeting-message {
   margin-top: 0;
   padding-top: 1.5em;
-  color: rgb(255, 255, 0);
+  color: var(--greeting-msg-color);
 }
 
 .home a {
-  color: #fff;
+  color: var(--white-shade);
 }
 
 @media only screen and (min-width: 1300px) {
@@ -300,7 +318,7 @@ nav a:hover {
     About Section 
 =======================*/
 .about {
-  background-color: #ddd;
+  background-color: var(--light-gray);
 }
 
 .flex-container {
@@ -329,7 +347,7 @@ nav a:hover {
 }
 
 .about-details {
-  background-color: lightblue;
+  background-color: var(--lightblue);
   padding: 3em 1em 2em 1em;
 }
 
@@ -379,7 +397,7 @@ nav a:hover {
     Portfolio Section 
 =======================*/
 .portfolio {
-  background-color: #fff;
+  background-color: var(--white-shade);
   color: var(--light-black);
 }
 
@@ -432,9 +450,9 @@ nav a:hover {
 }
 
 .card {
-  border: 1px solid #dadce0;
+  border: 1px solid var(--card-border-color);
   border-radius: 5px;
-  background-color: #fff;
+  background-color: var(--white-shade);
   flex-basis: 30%;
   width: 30%;
   height: auto;
@@ -473,17 +491,17 @@ nav a:hover {
 }
 
 .card-link .fab {
-  color: black;
+  color: var(--black);
   font-size: 37px;
 }
 
 .card-link .fab:hover {
-  color: #fff;
+  color: var(--white-shade);
 }
 
 .card-link a:hover {
   background-color: var(--blude-shade);
-  color: #fff;
+  color: var(--white-shade);
 }
 
 @media only screen and (max-width: 1000px) {
@@ -502,8 +520,8 @@ nav a:hover {
     Contact Section
 =================*/
 .contact {
-  background-color: #3d4250;
-  color: #fff;
+  background-color: var(--black-shade);
+  color: var(--white-shade);
   position: relative;
   padding-top: 175px;
 }
@@ -515,7 +533,7 @@ nav a:hover {
 }
 
 .contact h2 {
-  border-bottom: 3px solid #fff;
+  border-bottom: 3px solid var(--white-shade);
   width: 125px;
   margin: auto;
   padding-bottom: 0.5em;
@@ -534,10 +552,10 @@ nav a:hover {
 
 input[type="text"],
 textarea {
-  background-color: #1e242c;
-  border: 1px solid #ccc;
+  background-color: var(--dark-black);
+  border: 1px solid var(--light-gray);
   border-radius: 5px;
-  color: #fff;
+  color: var(--white-shade);
   display: inline-block;
   width: 100%;
   padding: 1.5em 2em;
@@ -551,11 +569,11 @@ textarea {
 }
 
 input[type="submit"] {
-  background-color: #1e242c;
+  background-color: var(--dark-black);
   border: none;
-  border: 1px solid #1e242c;
+  border: 1px solid var(--dark-black);
   border-radius: 5px;
-  color: #fff;
+  color: var(--white-shade);
   cursor: pointer;
   width: 25%;
   max-width: 250px;
@@ -568,7 +586,7 @@ input[type="submit"] {
 input[type="submit"]:hover {
   background-color: var(--blude-shade);
   border-color: var(--blude-shade);
-  color: #fff;
+  color: var(--white-shade);
 }
 
 @media only screen and (max-width: 560px) {
@@ -587,8 +605,8 @@ input[type="submit"]:hover {
   Footer 
 ==================*/
 footer {
-  background-color: #252525;
-  color: gray;
+  background-color: var(--footer-bg-color);
+  color: var(--gray);
   flex-direction: column;
   font-size: 0.8em;
   width: 100%;
@@ -609,7 +627,7 @@ footer p {
 }
 
 footer .fa-heart {
-  color: red;
+  color: var(--red);
 }
 
 footer .content {
@@ -618,7 +636,7 @@ footer .content {
 
 footer a {
   background-color: rgba(0, 0, 0, 0.2);
-  color: gray;
+  color: var(--gray);
   font-size: 0.8em;
   padding: 0.5em;
   justify-content: space-around;
@@ -650,26 +668,26 @@ footer .fab {
 
 .github:hover {
   background-color: black;
-  color: #fff;
+  color: var(--white-shade);
 }
 
 .linkedin:hover {
   background-color: #0c65c2;
-  color: #fff;
+  color: var(--white-shade);
 }
 
 .twitter:hover {
   background-color: #1ea2f1;
-  color: #fff;
+  color: var(--white-shade);
 }
 
 .facebook:hover {
   background-color: #0e92f3;
-  color: #fff;
+  color: var(--white-shade);
 }
 
 footer a:hover i {
-  color: #fff;
+  color: var(--white-shade);
 }
 
 .back-to-top {
@@ -684,5 +702,5 @@ footer a:hover i {
 }
 
 .back-to-top:hover {
-  color: var(--light-black);
+  color: var(--light-gray);
 }
