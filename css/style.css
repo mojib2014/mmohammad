@@ -256,8 +256,10 @@ nav a:hover {
     Home Section 
 ==============*/
 .home {
-  background: rgba(56, 53, 53, 0.6) url("../images/about-bg.JPG") no-repeat
-    center center;
+  background-color: rgba(9, 9, 9, 0.6);
+  background-image: url("../images/about-bg-img.JPG");
+  background-repeat: no-repeat;
+  background-position: center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;

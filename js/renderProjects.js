@@ -1,7 +1,6 @@
 import { projects } from "./projects.js";
 
 window.onload = function () {
-  let filtered = projects;
   // DOM Eelments
   const portfolioCardContainer = document.querySelector(
     ".portfolio-card-container",
@@ -11,6 +10,7 @@ window.onload = function () {
   const javascript = document.querySelectorAll(".javascript");
   const react = document.querySelectorAll(".react");
   const MERN = document.querySelectorAll(".MERN");
+
   // Filter Button's active class handler
   filterBtns.forEach(function (btn) {
     btn.addEventListener("click", function (e) {
