@@ -19,7 +19,6 @@
     <!-- Linkedin Metadata -->
     <meta property="og:title" content="Mojib Mohammad's Portfolio" />
     <meta property="og:type" content="Porsonal Portfolio" />
-    <meta property="og:url" content="https://mojib2014.github.io/mmohammad/" />
     <meta
       property="og:image"
       content="https://mojib2014.github.io/mmohammad/images/about-bg-img.JPG"
@@ -30,6 +29,21 @@
     />
 
     <title>Mojib Mohammad | UI &amp; UX designer</title>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-Q0N800WKXJ"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-Q0N800WKXJ");
+    </script>
 
     <!-- Portfolio Icon -->
     <link
@@ -72,6 +86,7 @@
         </nav>
         <nav class="mobile">
           <ul>
+            <li><a class="topnav" href="#home">home</a></li>
             <li><a class="topnav" href="#about">about</a></li>
             <li><a class="topnav" href="#portfolio">portfolio</a></li>
             <li>
@@ -99,6 +114,7 @@
           </p>
           <a
             href="images/Mojib-Mohammad's-2021-Resume.pdf"
+            download="images/Mojib-Mohammad's-2021-Resume.pdf"
             target="_blank"
             style="cursor: pointer"
             >download resume</a
@@ -151,11 +167,11 @@
               <p>I build most of my projects with React.</p>
               <p>
                 when I don't have anything else to do, I create facebook,
-                instagram, youtube clones.
+                instagram, youtube, twitter clones.
               </p>
               <p>
-                When I'm not coding, I usually play vollyball, read books and
-                watch youtube toturials.
+                When I'm not coding, I usually play volleyball, read books and
+                watch youtube tuturials.
               </p>
             </div>
           </div>
@@ -174,10 +190,10 @@
           </p>
         </div>
         <div class="content filter-btn-container">
-          <div class="filter active" data-filter="all">All</div>
           <div class="filter" data-filter="javascript">JavaScript</div>
           <div class="filter" data-filter="react">React.js</div>
           <div class="filter" data-filter="MERN">MERN</div>
+          <div class="filter" data-filter="PERN">Comming Soon</div>
         </div>
         <div class="content portfolio-card-container">
           <div class="card javascript">
@@ -186,7 +202,7 @@
               <h3>Coders Corner</h3>
               <p>
                 Asimple application for improving coding(software development)
-                Skills.
+                Skills(for students and mentors).
               </p>
               <h3>Tech Stack</h3>
               <p>
@@ -397,6 +413,12 @@
               </div>
             </div>
           </div>
+          <div class="card PERN">
+            <p>Comming Soon</p>
+          </div>
+          <div class="card PERN">
+            <p>Comming Soon</p>
+          </div>
         </div>
       </section>
 
@@ -477,6 +499,6 @@
       <i class="fas fa-angle-double-up back-to-top"></i>
     </footer>
     <script src="js/dom.js"></script>
-    <script type="module" src="js/renderProjects.js"></script>
+    <script type="module" src="js/filterProjects.js"></script>
   </body>
 </html>
