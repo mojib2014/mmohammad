@@ -1,15 +1,16 @@
 // DOM Elements
-const greetingMessage = document.querySelector(".greeting-message");
 const header = document.getElementById("header");
-const sections = document.querySelectorAll("section[id]");
-const topnav = document.querySelectorAll(".topnav");
+const navContainer = document.querySelector("header .content");
+const navLinks = document.querySelectorAll(".nav-link");
 const mobile = document.querySelector(".mobile");
 const humburger = document.querySelector(".humburger");
-const mainContent = document.querySelector("#main-content");
+const sections = document.querySelectorAll("section[id]");
 const backToTopBtn = document.querySelector(".back-to-top");
+const mainContent = document.querySelector("#main-content");
 
-// Greeting Function
+// ******* Greeting Function *********
 const greet = () => {
+  const greetingMessage = document.querySelector(".greeting-message");
   let greeting;
   const time = new Date().getHours();
   if (time < 11) greeting = "Morning";
@@ -21,18 +22,14 @@ const greet = () => {
 greet();
 
 // ****************** Events *******************
-
 // ********* Scroll Events *********
 // Sticky header on scroll
-window.onscroll = function () {
-  stickyHeader();
-};
+window.addEventListener("scroll", stickyHeader);
 
 function stickyHeader() {
-  if (
-    document.body.scrollTop > 450 ||
-    document.documentElement.scrollTop > 450
-  ) {
+  const scrollHeight = window.pageYOffset;
+  const headerHeight = header.getBoundingClientRect().height;
+  if (scrollHeight > headerHeight) {
     header.classList.add("sticky");
     humburger.style.color = "#000";
     backToTopBtn.style.display = "block";
@@ -43,26 +40,44 @@ function stickyHeader() {
   }
 }
 
-// Smooth scrolling
-topnav.forEach((elem) => elem.addEventListener("click", smoothScroll));
+// ******** Menus active class on scroll *******
+window.addEventListener("scroll", navHighlighter);
+function navHighlighter() {
+  // Get current scroll position
+  let scrollY = window.pageYOffset;
 
-function smoothScroll(event) {
-  event.preventDefault();
-  const targetHref = this.getAttribute("href");
-  const target = document.querySelector(targetHref);
-  const headerOffset = 10;
-  const elementPosition = target.offsetTop;
-  const offsetPosition = elementPosition - headerOffset;
-  window.scrollTo({
-    top: offsetPosition,
-    behavior: "smooth",
+  // Now we loop through sections to get height, top and ID values for each
+  sections.forEach((section) => {
+    const sectionHeight = section.getBoundingClientRect().height;
+    const sectionTop = section.offsetTop - 50;
+    sectionId = section.getAttribute("id");
+    const desktopnavLink = document.querySelector(
+      "nav.desktop a[href*=" + sectionId + "]",
+    );
+
+    /*
+    - If our current scroll position enters the space where current section on screen is, add .active class to corresponding navigation link, else remove it
+    - To know which link needs an active class, we use sectionId variable we are getting while looping through sections as an selector
+    */
+    if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+      desktopnavLink.classList.add("active");
+    } else {
+      desktopnavLink.classList.remove("active");
+    }
   });
-
-  // When page has scrolled to target element hide the navbar
-  hideMobileMenu();
 }
 
 // ******************* Click Events *******************
+
+// Header menus active class
+navLinks.forEach(function (navLink) {
+  navLink.addEventListener("click", function () {
+    const current = document.querySelectorAll(".mobile .active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+    hideMobileMenu();
+  });
+});
 
 // If anywhere in main content has been clicked hide the mobile navbar
 mainContent.onclick = function () {
@@ -81,52 +96,8 @@ humburger.addEventListener("click", () => {
   else mobile.style.display = "block";
 });
 
-// Header menus active class function
-determinActiveClass(topnav);
-
-function determinActiveClass(element) {
-  for (let i = 0; i < element.length; i++) {
-    topnav[i].addEventListener("click", function () {
-      const current = document.getElementsByClassName("active");
-      current[0].className = current[0].className.replace(" active", "");
-      this.className += " active";
-    });
-  }
-}
-
-// Menus active class on scroll
-window.addEventListener("scroll", navHighlighter);
-function navHighlighter() {
-  // Get current scroll position
-  let scrollY = window.pageYOffset;
-
-  // Now we loop through sections to get height, top and ID values for each
-  sections.forEach((current) => {
-    const sectionHeight = current.offsetHeight;
-    const sectionTop = current.offsetTop - 50;
-    sectionId = current.getAttribute("id");
-    /*
-    - If our current scroll position enters the space where current section on screen is, add .active class to corresponding navigation link, else remove it
-    - To know which link needs an active class, we use sectionId variable we are getting while looping through sections as an selector
-    */
-    if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-      document
-        .querySelector(".desktop a[href*=" + sectionId + "]")
-        .classList.add("active");
-    } else {
-      document
-        .querySelector("header .desktop a[href*=" + sectionId + "]")
-        .classList.remove("active");
-    }
-  });
-}
-
 // Back To Top button Click event
 backToTopBtn.onclick = function () {
-  window.requestAnimationFrame(scrollToTop);
-};
-
-function scrollToTop() {
   if (
     document.body.scrollTop > 500 ||
     document.documentElement.scrollTop > 500
@@ -137,4 +108,4 @@ function scrollToTop() {
       window.scrollTo({ top: 0, behavior: "smooth" }),
     );
   }
-}
+};

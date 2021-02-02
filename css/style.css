@@ -6,12 +6,13 @@
   --black-shade: #3d4350;
   --box-shadow-color: rgba(0, 0, 0, 0.16);
   --blude-shade: #26b;
+  --back-to-top-color: #75d14b;
   --card-border-color: #dadce0;
   --dark-black: #1e242c;
   --footer-bg-color: #252525;
   --greetin-msg-color: rgb(255, 255, 0);
   --gray: gray;
-  --home-bg-color: rgba(9, 9, 9, 0.6);
+  --home-bg-color: #3e4444;
   --light-black: #454545;
   --lightblue: lightblue;
   --light-gray: #ddd;
@@ -79,7 +80,7 @@ header nav ul,
 .about-details,
 .filter-btn-container,
 .portfolio-card-container,
-.card-link,
+.card-links,
 footer,
 footer .content {
   align-items: center;
@@ -269,16 +270,19 @@ nav a:hover {
     Home Section 
 ==============*/
 .home {
+  align-items: center;
   background-color: var(--home-bg-color);
   background-image: url("../images/about-bg-img.JPG");
   background-repeat: no-repeat;
   background-position: center;
+  display: flex;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
+  -ms-background-size: cover;
   background-size: cover;
   background-attachment: fixed;
-  background-blend-mode: multiply;
+  background-blend-mode: overlay;
   color: var(--white-shade);
   text-align: center;
   width: 100%;
@@ -288,24 +292,29 @@ nav a:hover {
 .home .content {
   animation-duration: 0.5s;
   animation-name: slideup;
-  padding: 14em 0 1em 0;
   height: 100%;
   opacity: 1;
 }
 
-.greeting-message {
+.content .greeting-message {
+  color: var(--greetin-msg-color);
   margin-top: 0;
   padding-top: 1.5em;
-  color: var(--greeting-msg-color);
 }
 
 .home a {
   color: var(--white-shade);
 }
 
-@media only screen and (min-width: 1300px) {
-  .home .content {
-    padding-top: 18em;
+@media only screen and (max-width: 600px) {
+  .home {
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -ms-background-size: cover;
+    width: auto;
+    height: auto;
   }
 }
 
@@ -459,6 +468,8 @@ nav a:hover {
 .card:hover {
   box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
   border-color: rgba(223, 225, 229, 0);
+  transform: scale(1.2);
+  transition: all 0.3s linear;
 }
 
 .card h3,
@@ -467,17 +478,18 @@ nav a:hover {
   padding: 0.2em 0;
 }
 
-.card-link {
+.card-links {
   width: 100%;
   justify-content: space-around;
   padding-top: 0.5em;
 }
 
-.card-link a:first-child {
+.card-links a:first-child {
+  border: none;
   padding: 0;
 }
 
-.card-link a {
+.card-links a {
   border: 1px solid var(--blude-shade);
   border-radius: 5px;
   padding: 0.5em;
@@ -485,16 +497,17 @@ nav a:hover {
   text-align: center;
 }
 
-.card-link .fab {
+.card-links .fab {
   color: var(--black);
-  font-size: 37px;
+  font-size: 40px;
 }
 
-.card-link .fab:hover {
-  color: var(--white-shade);
+.card-links a:hover {
+  transform: scale(1.3);
+  transition: all 0.3s linear;
 }
 
-.card-link a:hover {
+.card-links a:nth-child(2):hover {
   background-color: var(--blude-shade);
   color: var(--white-shade);
 }
@@ -596,6 +609,13 @@ input[type="submit"]:hover {
   }
 }
 
+.loading,
+.portfolio-loading {
+  width: 20%;
+  margin: 0 auto;
+  text-align: center;
+}
+
 /*=================
   Footer 
 ==================*/
@@ -687,7 +707,7 @@ footer a:hover i {
 
 .back-to-top {
   cursor: pointer;
-  color: var(--blude-shade);
+  color: var(--back-to-top-color);
   display: none;
   font-size: 50px;
   position: fixed;
@@ -697,5 +717,5 @@ footer a:hover i {
 }
 
 .back-to-top:hover {
-  color: var(--light-gray);
+  color: var(--blude-shade);
 }
