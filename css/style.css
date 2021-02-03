@@ -273,27 +273,25 @@ nav a:hover {
   align-items: center;
   background-color: var(--home-bg-color);
   background-image: url("../images/about-bg-img.JPG");
-  background-repeat: no-repeat;
   background-position: center;
-  display: flex;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  -ms-background-size: cover;
-  background-size: cover;
   background-attachment: fixed;
+  -o-background-size: cover;
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  display: flex;
   background-blend-mode: overlay;
   color: var(--white-shade);
   text-align: center;
   width: 100%;
   min-height: 100vh;
+  justify-content: center;
 }
 
 .home .content {
-  animation-duration: 0.5s;
-  animation-name: slideup;
-  height: 100%;
-  opacity: 1;
+  flex: 100%;
+  padding: 0.5em;
 }
 
 .content .greeting-message {
@@ -308,11 +306,12 @@ nav a:hover {
 
 @media only screen and (max-width: 600px) {
   .home {
-    background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     -ms-background-size: cover;
+    background-size: cover;
+    background-attachment: fixed;
     width: auto;
     height: auto;
   }

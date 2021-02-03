@@ -1,4 +1,4 @@
-const form = document.querySelector("form");
+const form = document.querySelector("#inputForm");
 const loadingElement = document.querySelector(".loading");
 const apiUrl = "http://localhost:5000/sendemail";
 
