@@ -1,9 +1,10 @@
-// DOM Elements
+// Selecting DOM Elements
 const header = document.getElementById("header");
 const navContainer = document.querySelector("header .content");
 const navLinks = document.querySelectorAll(".nav-link");
 const mobile = document.querySelector(".mobile");
 const humburger = document.querySelector(".humburger");
+const humburgerIcon = document.querySelector(".humburger i");
 const sections = document.querySelectorAll("section[id]");
 const backToTopBtn = document.querySelector(".back-to-top");
 const mainContent = document.querySelector("#main-content");
@@ -40,7 +41,7 @@ function stickyHeader() {
   }
 }
 
-// ******** Menus active class on scroll *******
+// ******** Adding active class to navbar links on scroll *******
 window.addEventListener("scroll", navHighlighter);
 function navHighlighter() {
   // Get current scroll position
@@ -69,7 +70,7 @@ function navHighlighter() {
 
 // ******************* Click Events *******************
 
-// Header menus active class
+// On click adding active class to the navbar's links
 navLinks.forEach(function (navLink) {
   navLink.addEventListener("click", function () {
     const current = document.querySelectorAll(".mobile .active");
@@ -79,21 +80,33 @@ navLinks.forEach(function (navLink) {
   });
 });
 
-// If anywhere in main content has been clicked hide the mobile navbar
+// Hidding mobile navbar when clicked in documnet's body
 mainContent.onclick = function () {
   mobile.style.display = "none";
 };
 
-// When mobile nav menus has been clicked and page has scrolled
+// When mobile navbar links has been clicked and page has scrolled
 // to that part hide the mobile menu
 function hideMobileMenu() {
   mobile.style.display = "none";
 }
 
-// Humburger menu click event
+// Humburger menu click event to display/hide the navbar and chage the humburger icon
 humburger.addEventListener("click", () => {
-  if (mobile.style.display === "block") mobile.style.display = "none";
-  else mobile.style.display = "block";
+  if (
+    mobile.style.marginLeft === "-100%" &&
+    humburgerIcon.classList.contains("fa-bars")
+  ) {
+    mobile.style.marginLeft = "0";
+    mobile.style.opacity = "1";
+    humburgerIcon.classList.remove("fa-bars");
+    humburgerIcon.classList.add("fa-times");
+  } else {
+    mobile.style.marginLeft = "-100%";
+    mobile.style.opacity = "0";
+    humburgerIcon.classList.remove("fa-times");
+    humburgerIcon.classList.add("fa-bars");
+  }
 });
 
 // Back To Top button Click event

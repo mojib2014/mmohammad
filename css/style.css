@@ -4,7 +4,8 @@
 :root {
   --black: black;
   --black-shade-100: #3d4350;
-  --box-shadow-black: rgba(0, 0, 0, 0.16);
+  --box-shadow-black-400: rgba(0, 0, 0, 0.16);
+  --box-shadow-black-500: rgba(0, 0, 0, 0.23);
   --blue-shade: dodgerblue;
   --back-to-top-color: dodgerblue;
   --light-gray: #dadce0;
@@ -45,8 +46,8 @@ body {
   font-size: 100%;
   letter-spacing: 0.7px;
   line-height: 1.5;
-  min-width: 100%;
-  min-height: 100%;
+  width: 100%;
+  height: 100%;
   margin: 0;
   padding: 0;
 }
@@ -57,8 +58,8 @@ main {
 }
 
 .content {
-  width: 90%;
   max-width: 1600px;
+  width: 90%;
   margin: 0 auto;
 }
 
@@ -95,7 +96,6 @@ footer .content {
   text-align: center;
 }
 
-.mobile,
 .humburger {
   display: none;
 }
@@ -140,8 +140,8 @@ header {
   left: 0;
   right: 0;
   width: 100%;
-  height: 60px;
   max-height: 60px;
+  height: 60px;
   z-index: 3;
   -webkit-transition: all 0.5s ease-in-out;
   -moz-transition: all 0.5s ease-in-out;
@@ -151,13 +151,15 @@ header {
 
 .sticky {
   background-color: var(--white-shade);
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 5px 0 rgba(0, 0, 0, 0.23);
-  -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16),
-    0 2px 5px 0 rgba(0, 0, 0, 0.23);
+  box-shadow: 0 2px 5px 0 var(--box-shadow-black-400),
+    0 2px 5px 0 var(--box-shadow-black-500);
+  -webkit-box-shadow: 0 2px 5px 0 var(--box-shadow-black-400),
+    0 2px 5px 0 var(--box-shadow-black-500);
 }
 
 header .content {
   min-height: 100%;
+  height: 100%;
 }
 
 .sticky a {
@@ -179,6 +181,7 @@ header a {
   width: 4em;
   height: auto;
   max-height: 60px;
+  height: 100%;
 }
 
 header nav ul {
@@ -200,20 +203,22 @@ header .active {
 .mobile {
   background-color: var(--white-shade-lighter);
   border-top: 2px solid var(--blue-shade);
-  position: absolute;
-  top: 60px;
+  position: fixed;
   left: 0;
-  right: 0;
+  top: 60px;
+  max-width: 100%;
   width: 100%;
-  transition: 0.5s;
+  height: auto;
+  margin-left: -100%;
+  opacity: 1;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .mobile ul {
   display: block;
   padding: 0.5em 0.2em 0;
-  width: 90%;
+  width: 100%;
   margin: auto;
-  transition: 0.5s;
 }
 
 .mobile ul li {
@@ -232,18 +237,21 @@ header .active {
 
 nav a:hover {
   color: var(--blue-shade);
-  transition: 0.3s;
+  transition: all 0.5s linear;
+}
+
+.fa-times {
+  color: rgb(213, 120, 120);
 }
 
 @media only screen and (max-width: 800px) {
-  .desktop {
-    display: none;
-    transition: 0.5s;
-  }
-
   .humburger {
     display: block;
-    transition: 0.5s;
+  }
+
+  .desktop {
+    display: none;
+    transition: all 0.5s linear;
   }
 }
 
@@ -263,8 +271,10 @@ nav a:hover {
   background-blend-mode: overlay;
   color: var(--white-shade);
   text-align: center;
+  max-width: 100%;
   width: 100%;
   min-height: 100vh;
+  height: 100%;
 }
 
 .home .content {
