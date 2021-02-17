@@ -1,13 +1,5 @@
 // Selecting DOM Elements
-const header = document.getElementById("header");
-const navContainer = document.querySelector("header .content");
-const navLinks = document.querySelectorAll(".nav-link");
-const mobile = document.querySelector(".mobile");
-const humburger = document.querySelector(".humburger");
-const humburgerIcon = document.querySelector(".humburger i");
-const sections = document.querySelectorAll("section[id]");
 const backToTopBtn = document.querySelector(".back-to-top");
-const mainContent = document.querySelector("#main-content");
 
 // ******* Greeting Function *********
 const greet = () => {
@@ -28,34 +20,34 @@ greet();
 window.addEventListener("scroll", stickyHeader);
 
 function stickyHeader() {
+  const header = document.getElementById("header");
   const scrollHeight = window.pageYOffset;
   const headerHeight = header.getBoundingClientRect().height;
   if (scrollHeight > headerHeight) {
     header.classList.add("sticky");
-    humburger.style.color = "#000";
     backToTopBtn.style.display = "block";
   } else {
     header.classList.remove("sticky");
-    humburger.style.color = "#fff";
     backToTopBtn.style.display = "none";
   }
 }
 
 // ******** Adding active class to navbar links on scroll *******
 window.addEventListener("scroll", navHighlighter);
+
 function navHighlighter() {
+  const sections = document.querySelectorAll("section[id]");
   // Get current scroll position
   let scrollY = window.pageYOffset;
 
   // Now we loop through sections to get height, top and ID values for each
   sections.forEach((section) => {
     const sectionHeight = section.getBoundingClientRect().height;
-    const sectionTop = section.offsetTop - 50;
+    const sectionTop = section.offsetTop - 60;
     sectionId = section.getAttribute("id");
     const desktopnavLink = document.querySelector(
-      "nav.desktop a[href*=" + sectionId + "]",
+      `.desktop a[href*= ${sectionId}]`,
     );
-
     /*
     - If our current scroll position enters the space where current section on screen is, add .active class to corresponding navigation link, else remove it
     - To know which link needs an active class, we use sectionId variable we are getting while looping through sections as an selector
@@ -71,27 +63,34 @@ function navHighlighter() {
 // ******************* Click Events *******************
 
 // On click adding active class to the navbar's links
-navLinks.forEach(function (navLink) {
-  navLink.addEventListener("click", function () {
+const navLinks = document.querySelectorAll(".mobile .nav-link");
+for (let i = 0; i < navLinks.length; i++) {
+  navLinks[i].addEventListener("click", function () {
     const current = document.querySelectorAll(".mobile .active");
     current[0].className = current[0].className.replace(" active", "");
     this.className += " active";
     hideMobileMenu();
   });
-});
+}
 
 // Hidding mobile navbar when clicked in documnet's body
+const mainContent = document.querySelector("#main-content");
+const humburgerIcon = document.querySelector(".humburger i");
+const mobile = document.querySelector(".mobile");
 mainContent.onclick = function () {
-  mobile.style.display = "none";
+  mobile.style.marginLeft = "-100%";
+  humburgerIcon.classList.replace("fa-times", "fa-bars");
 };
 
 // When mobile navbar links has been clicked and page has scrolled
 // to that part hide the mobile menu
 function hideMobileMenu() {
-  mobile.style.display = "none";
+  mobile.style.marginLeft = "-100%";
+  humburgerIcon.classList.replace("fa-times", "fa-bars");
 }
 
 // Humburger menu click event to display/hide the navbar and chage the humburger icon
+const humburger = document.querySelector(".humburger");
 humburger.addEventListener("click", () => {
   if (
     mobile.style.marginLeft === "-100%" &&
@@ -110,15 +109,14 @@ humburger.addEventListener("click", () => {
 });
 
 // Back To Top button Click event
-backToTopBtn.onclick = function () {
+backToTopBtn.onclick = function scrollToTop() {
+  let timeout;
   if (
-    document.body.scrollTop > 500 ||
-    document.documentElement.scrollTop > 500
+    document.body.scrollTop !== 0 ||
+    document.documentElement.scrollTop !== 0
   ) {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
-    window.requestAnimationFrame(() =>
-      window.scrollTo({ top: 0, behavior: "smooth" }),
-    );
-  }
+    timeout = setTimeout("scrollToTop()", 30);
+  } else clearTimeout(timeout);
 };

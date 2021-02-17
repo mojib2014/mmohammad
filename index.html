@@ -28,7 +28,7 @@
       content="Full Stack Developer &amp; Designer"
     />
 
-    <title>Mojib Mohammad | UI &amp; UX designer</title>
+    <title>Mojib Mohammad, UI &amp; UX designer</title>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script
@@ -36,7 +36,7 @@
       src="https://www.googletagmanager.com/gtag/js?id=G-CM10MT8ELF"
     ></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
+      (window.dataLayer = window.dataLayer), [];
       function gtag() {
         dataLayer.push(arguments);
       }
@@ -64,37 +64,36 @@
     <link rel="stylesheet" href="css/fontawesome-free-5.15.2-web/css/all.css" />
 
     <!-- Stylesheet -->
-    <link rel="stylesheet" href="css/style.css" />
+    <link type="text/css" rel="stylesheet" href="css/light.css" />
+    <link type="text/css" rel="stylesheet" href="css/dark.css" />
+    <link type="text/css" rel="stylesheet" href="css/default.css" />
   </head>
   <body>
     <!-- Header Section -->
     <header id="header">
       <div class="content">
         <a class="logo" href="index.html"
-          ><img src="images/logo.png" alt="portfolio logo"
+          ><img src="images/icons/logo.png" alt="portfolio logo"
         /></a>
         <nav class="desktop">
-          <ul>
-            <li><a class="nav-link active" href="#home">home</a></li>
-            <li><a class="nav-link" href="#about">about</a></li>
-            <li><a class="nav-link" href="#portfolio">portfolio</a></li>
-            <li>
-              <a href="https://my-blog-288121.web.app/topics">blog</a>
-            </li>
-            <li><a class="nav-link" href="#contact">contact</a></li>
-          </ul>
+          <a class="nav-link active" href="#home">home</a>
+          <a class="nav-link" href="#about">about</a>
+          <a class="nav-link" href="#portfolio">portfolio</a>
+          <a class="nav-link" href="https://my-blog-288121.web.app/topics"
+            >blog</a
+          >
+          <a class="nav-link" href="#contact">contact</a>
         </nav>
         <nav class="mobile">
-          <ul>
-            <li><a class="nav-link active" href="#home">home</a></li>
-            <li><a class="nav-link" href="#about">about</a></li>
-            <li><a class="nav-link" href="#portfolio">portfolio</a></li>
-            <li>
-              <a href="https://my-blog-288121.web.app/topics">blog</a>
-            </li>
-            <li><a class="nav-link" href="#contact">contact</a></li>
-          </ul>
+          <a class="nav-link active" href="#home">home</a>
+          <a class="nav-link" href="#about">about</a>
+          <a class="nav-link" href="#portfolio">portfolio</a>
+          <a class="nav-link" href="https://my-blog-288121.web.app/topics"
+            >blog</a
+          >
+          <a class="nav-link" href="#contact">contact</a>
         </nav>
+        <button id="theme-btn"><i class="fas fa-moon"></i></button>
         <div class="humburger">
           <i class="fas fa-bars"></i>
         </div>
@@ -104,7 +103,7 @@
     <!-- Page Main Content -->
     <main id="main-content" class="main-content">
       <!-- Home Section -->
-      <section id="home" class="home active">
+      <section id="home" class="home">
         <div class="content">
           <p class="greeting-message"></p>
           <h1>I'm Mojib Mohammad</h1>
@@ -113,8 +112,7 @@
             & user-friendly experiences.
           </p>
           <a
-            href="images/Mojib-Mohammad's-2021-Resume.pdf"
-            download="images/Mojib-Mohammad's-2021-Resume.pdf"
+            href="images/mojib-mohammad-2021.pdf"
             target="_blank"
             style="cursor: pointer"
             >download resume</a
@@ -190,12 +188,13 @@
           </p>
         </div>
         <div class="content filter-btn-container">
-          <div class="filter active" data-filter="javascript">JavaScript</div>
-          <div class="filter" data-filter="react">React.js</div>
-          <div class="filter" data-filter="MERN">MERN</div>
-          <div class="filter" data-filter="PERN">PERN Comming Soon</div>
+          <div class="filter active" data-category="all">All</div>
+          <div class="filter" data-category="javascript">JavaScript</div>
+          <div class="filter" data-category="react">React.js</div>
+          <div class="filter" data-category="MERN">MERN</div>
+          <div class="filter" data-category="PERN">PERN</div>
         </div>
-        <div class="content portfolio-card-container">
+        <div class="content projects-container">
           <div class="card javascript">
             <img alt="Coders Corner" src="images/portfolio/coderscorner.gif" />
             <div class="card-body">
@@ -205,13 +204,15 @@
                 Skills(for students and mentors).
               </p>
               <h3>Tech Stack</h3>
-              <p>
-                JavaScript | HTML5 | CSS3 | jQuery | MDN API | Anime.js | AJAX
-              </p>
+              <p>JavaScript, HTML5, CSS3, jQuery, MDN API, Anime.js, AJAX</p>
               <div class="card-links">
-                <a href="https://github.com/mojib2014/Coders-Corner"
+                <a
+                  class="link"
+                  href="https://github.com/mojib2014/Coders-Corner"
                   ><i class="fab fa-github-square"></i></a
-                ><a href="https://putincake.github.io/Coders-Corner/"
+                ><a
+                  class="link"
+                  href="https://putincake.github.io/Coders-Corner/"
                   >Live Project</a
                 >
               </div>
@@ -227,8 +228,8 @@
               </p>
               <h3>Tech Stack</h3>
               <p>
-                React.js | MongoDB | Node.js | Dropzone/Cloudinary | Google
-                Authentication | Reactstrap
+                React.js, MongoDB, Node.js, Dropzone/Cloudinary, Google
+                Authentication, Reactstrap
               </p>
               <div class="card-links">
                 <a href="https://github.com/mojib2014/dent-soft"
@@ -246,7 +247,7 @@
                 etc, like/dislike, pagination, and user authentication.
               </p>
               <h3>Tech Stack</h3>
-              <p>React.js | MongoDB | Node.js | Heruko, Git</p>
+              <p>React.js, MongoDB, Node.js, Heruko, Git</p>
               <div class="card-links">
                 <a href="#"><i class="fab fa-github-square"></i></a
                 ><a href="https://enigmatic-forest-05440.herokuapp.com/movies"
@@ -264,7 +265,7 @@
                 Bootstrap, jQuery.
               </p>
               <h3>Tech Stack</h3>
-              <p>JavaScript | jQuery | Bootstrap</p>
+              <p>JavaScript, jQuery, Bootstrap</p>
               <div class="card-links">
                 <a href="https://github.com/mojib2014/Unit-4-Game"
                   ><i class="fab fa-github-square"></i></a
@@ -280,7 +281,7 @@
               <h3>Comfy House</h3>
               <p>A simple ecomerce shopping cart</p>
               <h3>Tech Stack</h3>
-              <p>JavaScript | jQuery | HTML5 | CSS3</p>
+              <p>JavaScript, jQuery, HTML5, CSS3</p>
               <div class="card-links">
                 <a href="#"><i class="fab fa-github-square"></i></a
                 ><a href="https://vanilla-js-shoping-cart.netlify.app/"
@@ -298,7 +299,7 @@
                 localstorage(browser).
               </p>
               <h3>Tech Stack</h3>
-              <p>React | Local Storage(browser)</p>
+              <p>React, Local Storage(browser)</p>
               <div class="card-links">
                 <a href="https://codesandbox.io/s/react-issue-tracker-b2b46"
                   ><i class="fab fa-github-square"></i></a
@@ -314,7 +315,7 @@
               <h3>Counter App</h3>
               <p>A simple web shopping cart like app build with react.</p>
               <h3>Tech Stack</h3>
-              <p>React | Bootstrap | Fontawesome</p>
+              <p>React, Bootstrap, Fontawesome</p>
               <div class="card-links">
                 <a
                   href="https://codesandbox.io/s/counter-app-6g8j6?file=/package.json"
@@ -338,7 +339,7 @@
                 status of your train.
               </p>
               <h3>Tech Stack</h3>
-              <p>JavaScript | HTML5 | CSS3 | Git | Firebase</p>
+              <p>JavaScript, HTML5, CSS3, Git, Firebase</p>
               <div class="card-links">
                 <a href="https://github.com/mojib2014/Train-Scheduler"
                   ><i class="fab fa-github-square"></i></a
@@ -361,7 +362,7 @@
                 add a specific amount of points to your total score.
               </p>
               <h3>Tech Stack</h3>
-              <p>JavaScript | jQuery | Bootstrap</p>
+              <p>JavaScript, jQuery, Bootstrap</p>
               <div class="card-links">
                 <a href="https://github.com/mojib2014/Crystal-Collector-Game"
                   ><i class="fab fa-github-square"></i></a
@@ -383,7 +384,7 @@
                 with each other.
               </p>
               <h3>Tech Stack</h3>
-              <p>JavaScript | Firebase | jQuery | HTML5 | CSS3 | Reset CSS</p>
+              <p>JavaScript, Firebase, jQuery, HTML5, CSS3, Reset CSS</p>
               <div class="card-links">
                 <a href="https://github.com/mojib2014/RPS-Multiplayer"
                   ><i class="fab fa-github-square"></i></a
@@ -402,7 +403,7 @@
                 design skills.
               </p>
               <h3>Tech Stack</h3>
-              <p>JavaScript | HTML5 | CSS3</p>
+              <p>JavaScript, HTML5, CSS3</p>
               <div class="card-links">
                 <a
                   href="https://github.com/mojib2014/responsive-club-website/settings"
@@ -420,14 +421,14 @@
             <p>Comming Soon</p>
           </div>
           <div class="portfolio-loading">
-            <img src="images/loading.gif" alt="loading avatar" />
+            <img src="images/icons/loading.gif" alt="loading avatar" />
           </div>
         </div>
       </section>
 
       <!-- Contact Section -->
       <section id="contact" class="contact">
-        <svg
+        <!-- <svg
           preserveAspectRatio="none"
           viewBox="0 0 100 102"
           height="75"
@@ -437,7 +438,7 @@
           class="svgcolor-light"
         >
           <path d="M0 0 L50 100 L100 0 Z" fill="white" stroke="white"></path>
-        </svg>
+        </svg> -->
         <div class="content">
           <h2>Contact</h2>
           <form
@@ -484,7 +485,7 @@
             </div>
           </form>
           <div class="loading">
-            <img src="images/loading.gif" alt="loading avatar" />
+            <img src="images/icons/loading.gif" alt="loading avatar" />
           </div>
         </div>
       </section>
@@ -516,7 +517,8 @@
       <i class="fas fa-angle-double-up back-to-top"></i>
     </footer>
     <script src="js/dom.js"></script>
-    <script type="module" src="js/filterProjects.js"></script>
-    <script type="module" src="js/email.js"></script>
+    <script type="application/javascript" src="js/filter-projects.js"></script>
+    <script type="application/javascript" src="js/email.js"></script>
+    <script type="application/javascript" src="js/theme.js"></script>
   </body>
 </html>
