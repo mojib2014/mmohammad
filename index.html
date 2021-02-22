@@ -21,11 +21,11 @@
     <meta property="og:type" content="Porsonal Portfolio" />
     <meta
       property="og:image"
-      content="https://mojib2014.github.io/mmohammad/images/about-bg-img.JPG"
+      content="https://mojibmohammad.netlify.app/images/about-bg-img.JPG"
     />
     <meta
       property="og:description"
-      content="Full Stack Developer &amp; Designer"
+      content="Full Stack Developer &amp; UI/UX Designer"
     />
 
     <title>Mojib Mohammad, UI &amp; UX designer</title>
@@ -33,16 +33,16 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script
       async
-      src="https://www.googletagmanager.com/gtag/js?id=G-CM10MT8ELF"
+      src="https://www.googletagmanager.com/gtag/js?id=G-E02P6QM8SZ"
     ></script>
     <script>
-      (window.dataLayer = window.dataLayer), [];
+      window.dataLayer = window.dataLayer || [];
       function gtag() {
         dataLayer.push(arguments);
       }
       gtag("js", new Date());
 
-      gtag("config", "G-CM10MT8ELF");
+      gtag("config", "G-E02P6QM8SZ");
     </script>
 
     <!-- Portfolio Icon -->
@@ -64,13 +64,11 @@
     <link rel="stylesheet" href="css/fontawesome-free-5.15.2-web/css/all.css" />
 
     <!-- Stylesheet -->
-    <link type="text/css" rel="stylesheet" href="css/light.css" />
-    <link type="text/css" rel="stylesheet" href="css/dark.css" />
-    <link type="text/css" rel="stylesheet" href="css/default.css" />
+    <link type="text/css" rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     <!-- Header Section -->
-    <header id="header">
+    <header id="header" class="header-down">
       <div class="content">
         <a class="logo" href="index.html"
           ><img src="images/icons/logo.png" alt="portfolio logo"
@@ -428,19 +426,8 @@
 
       <!-- Contact Section -->
       <section id="contact" class="contact">
-        <!-- <svg
-          preserveAspectRatio="none"
-          viewBox="0 0 100 102"
-          height="75"
-          width="100%"
-          version="1.1"
-          xmlns="http://www.w3.org/2000/svg"
-          class="svgcolor-light"
-        >
-          <path d="M0 0 L50 100 L100 0 Z" fill="white" stroke="white"></path>
-        </svg> -->
         <div class="content">
-          <h2>Contact</h2>
+          <h2 class="section-title">Contact</h2>
           <form
             class="email-form"
             action="mailto:mmohammad3@outlook.com"
@@ -448,12 +435,17 @@
           >
             <div class="submit-btn">
               <p>Connect With Email(by simply clicking send)</p>
-              <input type="submit" value="send" />
+              <button type="button">Send</button>
               <h4>OR</h4>
             </div>
             <p>Have a question or want to work together?</p>
           </form>
-          <form id="inputForm" method="POST" enctype="multipart/form-data">
+          <form
+            name="contact"
+            id="contact-form"
+            method="POST"
+            data-netlify="true"
+          >
             <label for="name">Name</label>
             <input
               type="text"
@@ -481,8 +473,9 @@
               maxlength="200"
             ></textarea>
             <div class="submit-btn">
-              <input type="submit" value="Submit" />
+              <button type="button">submit</button>
             </div>
+            <div id="snackbar"></div>
           </form>
           <div class="loading">
             <img src="images/icons/loading.gif" alt="loading avatar" />
@@ -513,12 +506,18 @@
         <a href="https://www.facebook.com/Mojib2014" class="facebook"
           ><i class="fab fa-facebook-f"></i>Follow me on facebook</a
         >
+        <a href="https://codepen.io/mojib2014" class="codepen"
+          ><i class="fab fa-codepen"></i>Follow me on codepen</a
+        >
+        <a href="https://codesandbox.io/dashboard/home" class="codesandbox"
+          ><i class="cib-codesandbox"></i>Follow me on codesandbox</a
+        >
       </div>
       <i class="fas fa-angle-double-up back-to-top"></i>
     </footer>
-    <script src="js/dom.js"></script>
-    <script type="application/javascript" src="js/filter-projects.js"></script>
-    <script type="application/javascript" src="js/email.js"></script>
-    <script type="application/javascript" src="js/theme.js"></script>
+    <script type="text/javascript" src="js/dom.js"></script>
+    <script type="text/javascript" src="js/filter-projects.js"></script>
+    <script type="text/javascript" src="js/email.js"></script>
+    <script type="text/javascript" src="js/theme.js"></script>
   </body>
 </html>

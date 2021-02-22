@@ -17,19 +17,18 @@ greet();
 // ****************** Events *******************
 // ********* Scroll Events *********
 // Sticky header on scroll
-window.addEventListener("scroll", stickyHeader);
+let previouScrollPosition = window.pageYOffset;
+window.onscroll = function () {
+  fixedHeaderOnScrollDown();
+};
 
-function stickyHeader() {
+function fixedHeaderOnScrollDown() {
   const header = document.getElementById("header");
-  const scrollHeight = window.pageYOffset;
-  const headerHeight = header.getBoundingClientRect().height;
-  if (scrollHeight > headerHeight) {
-    header.classList.add("sticky");
-    backToTopBtn.style.display = "block";
-  } else {
-    header.classList.remove("sticky");
-    backToTopBtn.style.display = "none";
-  }
+  const currentScrollPosition = window.pageYOffset;
+  if (previouScrollPosition > currentScrollPosition) header.style.top = "0";
+  else header.style.top = "-50px";
+
+  previouScrollPosition = currentScrollPosition;
 }
 
 // ******** Adding active class to navbar links on scroll *******

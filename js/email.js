@@ -1,10 +1,11 @@
-const form = document.querySelector("#inputForm");
+const form = document.querySelector("#contact-form");
 const loadingElement = document.querySelector(".loading");
-const apiUrl = "http://localhost:5000/sendemail";
 
 // Form submit event listener
 loadingElement.style.display = "none";
-form.addEventListener("submit", async (event) => {
+form.addEventListener("submit", handleSubmit);
+
+async function handleSubmit(event) {
   event.preventDefault();
 
   const formData = new FormData(form);
@@ -21,16 +22,26 @@ form.addEventListener("submit", async (event) => {
   form.style.display = "none";
   loadingElement.style.display = "";
 
-  fetch(apiUrl, {
-    method: "POST",
-    body: JSON.stringify(userEmail),
-    headers: {
-      "content-type": "aplication/json",
-    },
-  }).then((res) => {
-    console.log(res);
-    form.reset();
-    form.style.display = "";
-    loadingElement.style.display = "none";
-  });
-});
+  try {
+    const res = await fetch("/emails", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams(formData).toString(),
+    });
+    if (res.ok) showSnack(res);
+  } catch (err) {
+    console.log(err);
+    showSnack(err);
+  }
+}
+
+function showSnack(res) {
+  const snackbar = document.getElementById("snackbar");
+  const p = document.createElement("p");
+  p.textContent = res.message;
+  snackbar.append(p);
+  snackbar.classList.add("show");
+  setTimeout(() => {
+    snackbar.classList.remove("show");
+  }, 3000);
+}
