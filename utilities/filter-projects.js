@@ -10,7 +10,6 @@ function filterProjects(category) {
     loading.style.display = "block";
     card.style.display = "none";
     if (card.classList.contains(category)) {
-      console.log("IF statement", category);
       setTimeout(function () {
         card.style.display = "block";
         loading.style.display = "none";

@@ -106,7 +106,7 @@
             & user-friendly experiences.
           </p>
           <a
-            href="images/Mojib_Mohammad.2021.pdf"
+            href="images/Mojib_Mohammad.2021.docx"
             target="_blank"
             style="cursor: pointer"
             >download resume</a
@@ -431,7 +431,7 @@
           >
             <div class="submit-btn">
               <p>Connect With Email(by simply clicking send)</p>
-              <button type="button">Send</button>
+              <button type="submit">Send</button>
               <h4>OR</h4>
             </div>
             <p>Have a question or want to work together?</p>
@@ -439,8 +439,8 @@
           <form
             name="contact"
             id="contact-form"
-            method="POST"
-            data-netlify="true"
+            action="mailto:mmohammad3@outlook.com"
+            enctype="text/plain"
           >
             <label for="name">Name</label>
             <input
@@ -469,7 +469,7 @@
               maxlength="200"
             ></textarea>
             <div class="submit-btn">
-              <button type="button">submit</button>
+              <button type="submit">submit</button>
             </div>
             <div id="snackbar"></div>
           </form>
@@ -511,9 +511,9 @@
       </div>
       <i class="fas fa-angle-double-up back-to-top"></i>
     </footer>
-    <script type="text/javascript" src="js/dom.js"></script>
-    <script type="text/javascript" src="js/filter-projects.js"></script>
-    <script type="text/javascript" src="js/email.js"></script>
-    <script type="text/javascript" src="js/theme.js"></script>
+    <script type="module" src="index.js"></script>
+    <script type="text/javascript" src="utilities/filter-projects.js"></script>
+    <script type="text/javascript" src="utilities/email.js"></script>
+    <script src="utilities/theme.js"></script>
   </body>
 </html>
