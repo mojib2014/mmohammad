@@ -2,6 +2,7 @@
 import {
   fixedHeaderOnScroll,
   hightlightNavOnScroll,
+  onScrollDownShowBackToTopBtn,
 } from "./utilities/scrollEvents.js";
 import {
   highlightNavLinkOnClick,
@@ -28,9 +29,10 @@ greet(greetingMessage);
 // Scroll events
 window.onscroll = function () {
   // Fixed header on scroll
-  fixedHeaderOnScroll(header);
+  fixedHeaderOnScroll(header, backToTopBtn);
   // Highlight nav link on scroll
   hightlightNavOnScroll(sections);
+  onScrollDownShowBackToTopBtn(backToTopBtn);
 };
 
 // Click events

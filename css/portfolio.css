@@ -53,6 +53,7 @@
 .card:hover {
   background-color: var(--black-shade-500);
   box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
+  color: var(--white);
   transition: all 0.3s linear;
 }
 

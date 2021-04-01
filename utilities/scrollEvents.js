@@ -31,3 +31,9 @@ export const hightlightNavOnScroll = (domElement) => {
     }
   });
 };
+
+export const onScrollDownShowBackToTopBtn = (domElement) => {
+  if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800)
+    domElement.style.display = "block";
+  else domElement.style.display = "none";
+};
