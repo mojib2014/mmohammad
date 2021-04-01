@@ -123,10 +123,12 @@ footer a:hover i {
 }
 
 .back-to-top {
+  border: none;
+  background: transparent;
   cursor: pointer;
   color: var(--red);
   display: none;
-  font-size: 50px;
+  font-size: 40px;
   position: fixed;
   right: 0.5em;
   bottom: 3%;

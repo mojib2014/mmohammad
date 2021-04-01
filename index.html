@@ -554,8 +554,9 @@
           <form
             name="contact"
             id="contact-form"
-            action="mailto:mmohammad3@outlook.com"
+            method="POST"
             enctype="text/plain"
+            data-netlify="true"
           >
             <label for="name">Name</label>
             <input
@@ -584,7 +585,7 @@
               maxlength="200"
             ></textarea>
             <div class="submit-btn">
-              <button type="submit">submit</button>
+              <button type="submit">Send</button>
             </div>
             <div id="snackbar"></div>
           </form>
@@ -649,9 +650,9 @@
         </button>
       </div>
     </footer>
-    <script type="module" src="index.js"></script>
-    <script type="text/javascript" src="utilities/filter-projects.js"></script>
-    <script type="text/javascript" src="utilities/email.js"></script>
-    <script src="utilities/theme.js"></script>
+    <script defer type="module" src="index.js"></script>
+    <script defer src="utilities/filter-projects.js"></script>
+    <script defer src="utilities/email.js"></script>
+    <script defer src="utilities/theme.js"></script>
   </body>
 </html>
