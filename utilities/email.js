@@ -28,8 +28,8 @@ function showSnack(text, type) {
   const p = document.createElement("p");
   p.textContent = text;
   snackbar.append(p);
-  if (type === "success") snackbar.classList.add("show success");
-  if (type === "error") snackbar.classList.add("show error");
+  if (type === "success") snackbar.classList.add("show", "success");
+  if (type === "error") snackbar.classList.add("show", "error");
   setTimeout(() => {
     snackbar.classList.remove("show");
   }, 3000);
