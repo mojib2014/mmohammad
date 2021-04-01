@@ -1,0 +1,112 @@
+/*============
+    Header 
+=============*/
+header {
+  background-color: var(--navbar-bkg-color);
+  box-shadow: 0 2px 5px 0 var(--box-shadow-black-400),
+    0 2px 5px 0 var(--box-shadow-black-500);
+  -webkit-box-shadow: 0 2px 5px 0 var(--box-shadow-black-400),
+    0 2px 5px 0 var(--box-shadow-black-500);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  max-height: 50px;
+  height: 100%;
+  -webkit-transition: top 0.5s ease-in-out;
+  -moz-transition: top 0.5s ease-in-out;
+  -o-transition: top 0.5s ease-in-out;
+  transition: top 0.5s ease-in-out;
+  z-index: 2;
+}
+
+.logo {
+  margin-right: auto;
+}
+
+.desktop {
+  margin-left: auto;
+}
+
+.nav-link {
+  color: var(--navbar-text-color);
+  display: block;
+  text-decoration: none;
+  text-transform: uppercase;
+  line-height: 50px;
+  padding: 0 1.5rem;
+}
+
+.logo img {
+  width: 4em;
+  height: auto;
+  max-height: 50px;
+}
+
+nav .active {
+  background-color: var(--nav-active-link-bgk-color);
+  color: var(--navbar-text-color);
+}
+
+.mobile {
+  background-color: var(--navbar-bkg-color);
+  position: fixed;
+  left: 0;
+  top: 50px;
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  margin-left: -100%;
+  opacity: 1;
+  overflow-y: auto;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.mobile a {
+  display: block;
+  padding: 0.5em 0.2em 0;
+  width: 100%;
+  margin: auto;
+}
+
+.humburger {
+  color: var(--navbar-text-color);
+  cursor: pointer;
+  display: none;
+  font-size: 25px;
+}
+
+nav a:hover {
+  background-color: var(--nav-active-link-bgk-color);
+  transition: all 0.5s linear;
+}
+
+.fa-times {
+  color: var(--red);
+}
+
+#theme-btn {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  padding-left: 0.7rem;
+  justify-self: flex-end;
+  outline: none;
+}
+
+#theme-btn .fa-moon {
+  font-size: 1.9rem;
+  color: var(--navbar-text-color);
+  transition: 0.5s linear;
+}
+
+@media only screen and (max-width: 800px) {
+  .humburger {
+    display: block;
+  }
+
+  .desktop {
+    display: none;
+    transition: all 0.5s linear;
+  }
+}

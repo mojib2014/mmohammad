@@ -1,0 +1,61 @@
+/*============
+    Home Section 
+==============*/
+.home {
+  background-color: rgba(27, 144, 194, 0.171);
+  background-image: url("../images/about-bg-img.JPG");
+  background-position: center;
+  background-attachment: fixed;
+  -o-background-size: cover;
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-blend-mode: overlay;
+  color: var(--white);
+  text-align: center;
+  max-width: 100%;
+  width: 100%;
+  min-height: 100vh;
+  height: 100%;
+}
+
+.home .content {
+  flex: 100%;
+  padding: 0.5em 0.5em;
+}
+
+.content .greeting-message {
+  color: yellow;
+  margin-top: 0;
+}
+
+.home p {
+  margin-bottom: 1em;
+}
+
+.home a {
+  border: 1px solid var(--blue-shade);
+  border-radius: 5px;
+  color: var(--white);
+  display: block;
+  margin: auto;
+  max-width: 300px;
+  padding: 1em;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  transition: 0.5s;
+}
+
+.home a:hover {
+  background-color: var(--blue-shade);
+  color: var(--white);
+  transition: 0.5s;
+}
+
+@media only screen and (max-width: 600px) {
+  .home {
+    background-attachment: scroll;
+  }
+}

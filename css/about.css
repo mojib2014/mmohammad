@@ -1,0 +1,78 @@
+/*======================
+    About Section 
+=======================*/
+.about {
+  background-color: var(--bkg-color);
+}
+
+.flex-container {
+  padding: 2em 0;
+  max-width: 100%;
+  margin: auto;
+}
+
+.flex-item {
+  flex-basis: 20%;
+  text-align: center;
+  margin: auto;
+}
+
+.about img {
+  width: 25%;
+  height: 25%;
+  margin: auto;
+  padding-bottom: 1rem;
+}
+
+.about p:first-child {
+  padding-top: 1em;
+}
+
+.about-details {
+  background-color: var(--bkg-color);
+  margin-top: 3em;
+  padding-top: 2em;
+}
+
+.about-img {
+  flex: 30%;
+  margin: auto;
+}
+
+.about-img img {
+  clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+  width: 100%;
+  height: auto;
+}
+
+.about-paragraph {
+  align-self: center;
+  flex: 70%;
+  padding-left: 1.5em;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .flex-item {
+    flex: 40%;
+    padding: 1.5em 0;
+  }
+
+  .about-details {
+    flex-direction: column;
+  }
+
+  .about-img {
+    max-width: 300px;
+    height: auto;
+  }
+
+  .about-paragraph {
+    align-self: center;
+  }
+}
+
+@media only screen and (max-width: 31.25em) {
+  .flex-item {
+    flex: 90%;
+  }
+}

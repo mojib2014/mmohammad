@@ -64,48 +64,116 @@
     <link rel="stylesheet" href="css/fontawesome-free-5.15.2-web/css/all.css" />
 
     <!-- Stylesheet -->
+    <link type="text/css" rel="stylesheet" href="css/navbar.css" />
+    <link type="text/css" rel="stylesheet" href="css/home.css" />
+    <link type="text/css" rel="stylesheet" href="css/about.css" />
+    <link type="text/css" rel="stylesheet" href="css/portfolio.css" />
+    <link type="text/css" rel="stylesheet" href="css/contact.css" />
     <link type="text/css" rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     <!-- Header Section -->
-    <header id="header" class="header-down">
+    <header id="header" class="header-down" aria-label="banner">
       <div class="content">
         <a class="logo" href="index.html"
-          ><img src="images/icons/logo.png" alt="portfolio logo"
+          ><img
+            src="images/icons/logo.png"
+            aria-label="logo"
+            title="Logo"
+            alt="portfolio logo"
         /></a>
-        <nav class="desktop">
-          <a class="nav-link active" href="#home">home</a>
-          <a class="nav-link" href="#about">about</a>
-          <a class="nav-link" href="#portfolio">portfolio</a>
-          <a class="nav-link" href="https://blogclient.netlify.app">blog</a>
-          <a class="nav-link" href="#contact">contact</a>
+        <nav class="desktop" aria-label="Navigation" title="Navigation">
+          <a aria-label="home" title="Home" class="nav-link active" href="#home"
+            >home</a
+          >
+          <a aria-label="about" title="About" class="nav-link" href="#about"
+            >about</a
+          >
+          <a
+            aria-label="portfolio"
+            title="Portfolio"
+            class="nav-link"
+            href="#portfolio"
+            >portfolio</a
+          >
+          <a
+            aria-label="blog"
+            title="Blog"
+            class="nav-link"
+            href="https://blogclient.netlify.app"
+            >blog</a
+          >
+          <a
+            aria-label="contact"
+            title="Contact"
+            class="nav-link"
+            href="#contact"
+            >contact</a
+          >
         </nav>
-        <nav class="mobile">
-          <a class="nav-link active" href="#home">home</a>
-          <a class="nav-link" href="#about">about</a>
-          <a class="nav-link" href="#portfolio">portfolio</a>
-          <a class="nav-link" href="https://blogclient.netlify.app">blog</a>
-          <a class="nav-link" href="#contact">contact</a>
+        <nav class="mobile" aria-label="Navigation">
+          <a aria-label="home" title="Home" class="nav-link active" href="#home"
+            >home</a
+          >
+          <a aria-label="about" title="About" class="nav-link" href="#about"
+            >about</a
+          >
+          <a
+            aria-label="Portfolio"
+            title="Portfolio"
+            class="nav-link"
+            href="#portfolio"
+            >portfolio</a
+          >
+          <a
+            aria-label="blog"
+            title="Blog"
+            class="nav-link"
+            href="https://blogclient.netlify.app"
+            >blog</a
+          >
+          <a
+            aria-label="contact"
+            title="Contact"
+            class="nav-link"
+            href="#contact"
+            >contact</a
+          >
         </nav>
-        <button id="theme-btn"><i class="fas fa-moon"></i></button>
-        <div class="humburger">
+        <button aria-label="theme" title="Theme" id="theme-btn">
+          <i class="fas fa-moon"></i>
+        </button>
+        <div
+          class="humburger"
+          aria-label="humberger menu"
+          title="Humberger Menu"
+        >
           <i class="fas fa-bars"></i>
         </div>
       </div>
     </header>
 
     <!-- Page Main Content -->
-    <main id="main-content" class="main-content">
+    <main
+      id="main-content"
+      class="main-content"
+      aria-label="main content wrapper"
+    >
       <!-- Home Section -->
-      <section id="home" class="home">
+      <section id="home" class="home" aria-label="home section">
         <div class="content">
-          <p class="greeting-message"></p>
-          <h1>I'm Mojib Mohammad</h1>
+          <p
+            class="greeting-message"
+            aria-label="greeting message"
+            title="Greetin Message"
+          ></p>
+          <h1 aria-label="Owner Name">I'm Mojib Mohammad</h1>
           <p>
             I'm an Oakland, CA based UX & UI designer focused on crafting clean
             & user-friendly experiences.
           </p>
           <a
+            aria-label="resume link"
             href="images/Mojib_Mohammad.2021.docx"
             target="_blank"
             style="cursor: pointer"
@@ -115,12 +183,16 @@
       </section>
 
       <!-- About Section -->
-      <section id="about" class="about">
+      <section id="about" class="about" aria-label="about section">
         <div class="content">
-          <h2 class="section-title">About Me</h2>
+          <h2 class="section-title" aria-label="about me">About Me</h2>
           <div class="flex-container">
             <div class="flex-item">
-              <img src="images/icons/speedometer.svg" alt="speedometer icon" />
+              <img
+                src="images/icons/speedometer.svg"
+                alt="speedometer icon"
+                aria-label="speedometer icon"
+              />
               <h3>Fast</h3>
               <p>Fast load times my highest priority.</p>
             </div>
@@ -171,9 +243,9 @@
       </section>
 
       <!-- Portfolio Description Section -->
-      <section id="portfolio" class="portfolio">
+      <section id="portfolio" class="portfolio" aria-label="portfolio section">
         <div class="content portfolio-description">
-          <h2 class="section-title">Portfolio</h2>
+          <h2 class="section-title" aria-label="portfolio title">Portfolio</h2>
           <p>
             Below you can see some projects I've been working on lately. I
             divide each project into four follow-up areas: comprehensive
@@ -181,14 +253,14 @@
             to create great product with client goals in mind.
           </p>
         </div>
-        <div class="content filter-btn-container">
+        <div class="content filter-btn-container" aria-label="Filter buttons">
           <div class="filter active" data-category="all">All</div>
           <div class="filter" data-category="javascript">JavaScript</div>
           <div class="filter" data-category="react">React.js</div>
           <div class="filter" data-category="MERN">MERN</div>
           <div class="filter" data-category="PERN">PERN</div>
         </div>
-        <div class="content projects-container">
+        <div class="content projects-container" aria-label="Projects container">
           <div class="card javascript">
             <img alt="Coders Corner" src="images/portfolio/coderscorner.gif" />
             <div class="card-body">
@@ -201,10 +273,12 @@
               <p>JavaScript, HTML5, CSS3, jQuery, MDN API, Anime.js, AJAX</p>
               <div class="card-links">
                 <a
+                  aria-label="Repository link"
                   class="link"
                   href="https://github.com/mojib2014/Coders-Corner"
                   ><i class="fab fa-github-square"></i></a
                 ><a
+                  aria-label="Live project"
                   class="link"
                   href="https://putincake.github.io/Coders-Corner/"
                   >Live Project</a
@@ -226,9 +300,15 @@
                 Authentication, Reactstrap
               </p>
               <div class="card-links">
-                <a href="https://github.com/mojib2014/dent-soft"
+                <a
+                  aria-label="Repository link"
+                  href="https://github.com/mojib2014/dent-soft"
                   ><i class="fab fa-github-square"></i></a
-                ><a href="https://dent-soft.herokuapp.com/">Live Project</a>
+                ><a
+                  aria-label="Live project"
+                  href="https://dent-soft.herokuapp.com/"
+                  >Live Project</a
+                >
               </div>
             </div>
           </div>
@@ -243,8 +323,11 @@
               <h3>Tech Stack</h3>
               <p>React.js, MongoDB, Node.js, Heruko, Git</p>
               <div class="card-links">
-                <a href="#"><i class="fab fa-github-square"></i></a
-                ><a href="https://react-vidly.netlify.app/movies"
+                <a aria-label="Repository link" href="#"
+                  ><i class="fab fa-github-square"></i></a
+                ><a
+                  aria-label="Live project"
+                  href="https://react-vidly.netlify.app/movies"
                   >Live Project</a
                 >
               </div>
@@ -261,9 +344,13 @@
               <h3>Tech Stack</h3>
               <p>JavaScript, jQuery, Bootstrap</p>
               <div class="card-links">
-                <a href="https://github.com/mojib2014/Unit-4-Game"
+                <a
+                  aria-label="Repository link"
+                  href="https://github.com/mojib2014/Unit-4-Game"
                   ><i class="fab fa-github-square"></i></a
-                ><a href="https://mojib2014.github.io/Unit-4-Game/"
+                ><a
+                  aria-label="Live project"
+                  href="https://mojib2014.github.io/Unit-4-Game/"
                   >Live Project</a
                 >
               </div>
@@ -277,8 +364,11 @@
               <h3>Tech Stack</h3>
               <p>JavaScript, jQuery, HTML5, CSS3</p>
               <div class="card-links">
-                <a href="#"><i class="fab fa-github-square"></i></a
-                ><a href="https://vanilla-js-shoping-cart.netlify.app/"
+                <a aria-label="Repository link" href="#"
+                  ><i class="fab fa-github-square"></i></a
+                ><a
+                  aria-label="Live project"
+                  href="https://vanilla-js-shoping-cart.netlify.app/"
                   >Live Project</a
                 >
               </div>
@@ -295,9 +385,13 @@
               <h3>Tech Stack</h3>
               <p>React, Local Storage(browser)</p>
               <div class="card-links">
-                <a href="https://codesandbox.io/s/react-issue-tracker-b2b46"
+                <a
+                  aria-label="Repository link"
+                  href="https://codesandbox.io/s/react-issue-tracker-b2b46"
                   ><i class="fab fa-github-square"></i></a
-                ><a href="https://codesandbox.io/s/react-issue-tracker-b2b46"
+                ><a
+                  aria-label="Live project"
+                  href="https://codesandbox.io/s/react-issue-tracker-b2b46"
                   >Live Project</a
                 >
               </div>
@@ -312,9 +406,11 @@
               <p>React, Bootstrap, Fontawesome</p>
               <div class="card-links">
                 <a
+                  aria-label="Repository link"
                   href="https://codesandbox.io/s/counter-app-6g8j6?file=/package.json"
                   ><i class="fab fa-github-square"></i></a
                 ><a
+                  aria-label="Live project"
                   href="https://codesandbox.io/s/counter-app-6g8j6?file=/package.json"
                   >Live Project</a
                 >
@@ -335,9 +431,13 @@
               <h3>Tech Stack</h3>
               <p>JavaScript, HTML5, CSS3, Git, Firebase</p>
               <div class="card-links">
-                <a href="https://github.com/mojib2014/Train-Scheduler"
+                <a
+                  aria-label="Repository link"
+                  href="https://github.com/mojib2014/Train-Scheduler"
                   ><i class="fab fa-github-square"></i></a
-                ><a href="https://mojib2014.github.io/Train-Scheduler/"
+                ><a
+                  aria-label="Live project"
+                  href="https://mojib2014.github.io/Train-Scheduler/"
                   >Live Project</a
                 >
               </div>
@@ -358,9 +458,13 @@
               <h3>Tech Stack</h3>
               <p>JavaScript, jQuery, Bootstrap</p>
               <div class="card-links">
-                <a href="https://github.com/mojib2014/Crystal-Collector-Game"
+                <a
+                  aria-label="Repository link"
+                  href="https://github.com/mojib2014/Crystal-Collector-Game"
                   ><i class="fab fa-github-square"></i></a
-                ><a href="https://mojib2014.github.io/Crystal-Collector-Game/"
+                ><a
+                  aria-label="Live project"
+                  href="https://mojib2014.github.io/Crystal-Collector-Game/"
                   >Live Project</a
                 >
               </div>
@@ -380,9 +484,13 @@
               <h3>Tech Stack</h3>
               <p>JavaScript, Firebase, jQuery, HTML5, CSS3, Reset CSS</p>
               <div class="card-links">
-                <a href="https://github.com/mojib2014/RPS-Multiplayer"
+                <a
+                  aria-label="Repository link"
+                  href="https://github.com/mojib2014/RPS-Multiplayer"
                   ><i class="fab fa-github-square"></i></a
-                ><a href="https://mojib2014.github.io/RPS-Multiplayer/"
+                ><a
+                  aria-label="Live project"
+                  href="https://mojib2014.github.io/RPS-Multiplayer/"
                   >Live Project</a
                 >
               </div>
@@ -400,9 +508,12 @@
               <p>JavaScript, HTML5, CSS3</p>
               <div class="card-links">
                 <a
+                  aria-label="Repository link"
                   href="https://github.com/mojib2014/responsive-club-website/settings"
                   ><i class="fab fa-github-square"></i></a
-                ><a href="https://mojib2014.github.io/responsive-club-website/#"
+                ><a
+                  aria-label="Live project"
+                  href="https://mojib2014.github.io/responsive-club-website/#"
                   >Live Project</a
                 >
               </div>
@@ -421,10 +532,10 @@
       </section>
 
       <!-- Contact Section -->
-      <section id="contact" class="contact">
+      <section id="contact" class="contact" aria-label="contact section">
         <div class="content">
           <h2 class="section-title">Contact</h2>
-          <form
+          <!-- <form
             class="email-form"
             action="mailto:mmohammad3@outlook.com"
             method="POST"
@@ -435,7 +546,10 @@
               <h4>OR</h4>
             </div>
             <p>Have a question or want to work together?</p>
-          </form>
+          </form> -->
+          <p class="have-a-question">
+            Have a question or want to work together?
+          </p>
           <form
             name="contact"
             id="contact-form"
@@ -481,35 +595,52 @@
     </main>
 
     <!-- Footer Section -->
-    <footer>
-      <p>
-        &copy;2020 <span class="copyright-author">Mojib Mohammad</span>. Built
-        with a little JavaScript and <i class="fas fa-heart"></i> in Oakland, CA
-      </p>
-      <div class="content">
-        <a href="https://github.com/mojib2014" class="github"
-          ><i class="fab fa-github-square"></i>Follow me on github</a
-        >
-        <a
-          href="https://www.linkedin.com/in/mojib-mohammad/"
-          target="_blank"
-          class="linkedin"
-          ><i class="fab fa-linkedin-in"></i>Follow me on linkedin</a
-        >
-        <a href="https://twitter.com/mojibmonir" class="twitter"
-          ><i class="fab fa-twitter-square"></i>Follow me on twitter</a
-        >
-        <a href="https://www.facebook.com/Mojib2014" class="facebook"
-          ><i class="fab fa-facebook-f"></i>Follow me on facebook</a
-        >
-        <a href="https://codepen.io/mojib2014" class="codepen"
-          ><i class="fab fa-codepen"></i>Follow me on codepen</a
-        >
-        <a href="https://codesandbox.io/dashboard/home" class="codesandbox"
-          ><i class="cib-codesandbox"></i>Follow me on codesandbox</a
-        >
+    <footer aria-label="footer">
+      <div class="content" aria-label="footer links">
+        <p>
+          &copy;2020 <span class="copyright-author">Mojib Mohammad</span>. Built
+          with a little JavaScript and <i class="fas fa-heart"></i> in Oakland,
+          CA
+        </p>
+        <div class="footer-content">
+          <div class="footer-social-links">
+            <a href="https://github.com/mojib2014" class="github"
+              ><i class="fab fa-github-square"></i>Follow me on github</a
+            >
+            <a
+              href="https://www.linkedin.com/in/mojib-mohammad/"
+              target="_blank"
+              class="linkedin"
+              ><i class="fab fa-linkedin-in"></i>Follow me on linkedin</a
+            >
+            <a href="https://twitter.com/mojibmonir" class="twitter"
+              ><i class="fab fa-twitter-square"></i>Follow me on twitter</a
+            >
+            <a href="https://www.facebook.com/Mojib2014" class="facebook"
+              ><i class="fab fa-facebook-f"></i>Follow me on facebook</a
+            >
+            <a href="https://codepen.io/mojib2014" class="codepen"
+              ><i class="fab fa-codepen"></i>Follow me on codepen</a
+            >
+            <a href="https://codesandbox.io/dashboard/home" class="codesandbox"
+              ><i class="cib-codesandbox"></i>Follow me on codesandbox</a
+            >
+          </div>
+          <nav class="footer-nav-links" aria-label="Navigation">
+            <a aria-label="link" href="#home">home</a>
+            <a aria-label="link" href="#about">about</a>
+            <a aria-label="link" href="#portfolio">portfolio</a>
+            <a aria-label="link" href="https://blogclient.netlify.app">blog</a>
+            <a aria-label="link" href="#contact">contact</a>
+          </nav>
+          <div class="privacy">
+            <a href="/#">Privacy Policy</a>
+            <a href="/#">Terms of use</a>
+            <a href="/#">Cookies Policy</a>
+          </div>
+        </div>
+        <button class="back-to-top">Top</button>
       </div>
-      <i class="fas fa-angle-double-up back-to-top"></i>
     </footer>
     <script type="module" src="index.js"></script>
     <script type="text/javascript" src="utilities/filter-projects.js"></script>
