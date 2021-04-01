@@ -64,13 +64,13 @@
     <link rel="stylesheet" href="css/fontawesome-free-5.15.2-web/css/all.css" />
 
     <!-- Stylesheets -->
+    <link type="text/css" rel="stylesheet" href="css/style.css" />
     <link type="text/css" rel="stylesheet" href="css/navbar.css" />
     <link type="text/css" rel="stylesheet" href="css/home.css" />
     <link type="text/css" rel="stylesheet" href="css/about.css" />
     <link type="text/css" rel="stylesheet" href="css/portfolio.css" />
     <link type="text/css" rel="stylesheet" href="css/contact.css" />
     <link type="text/css" rel="stylesheet" href="css/footer.css" />
-    <link type="text/css" rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     <!-- Header Section -->
@@ -144,11 +144,7 @@
         <button aria-label="theme" title="Theme" id="theme-btn">
           <i class="fas fa-moon"></i>
         </button>
-        <div
-          class="humburger"
-          aria-label="humberger menu"
-          title="Humberger Menu"
-        >
+        <div class="humburger" role="mobile menue">
           <i class="fas fa-bars"></i>
         </div>
       </div>
@@ -163,12 +159,8 @@
       <!-- Home Section -->
       <section id="home" class="home" aria-label="home section">
         <div class="content">
-          <p
-            class="greeting-message"
-            aria-label="greeting message"
-            title="Greetin Message"
-          ></p>
-          <h1 aria-label="Owner Name">I'm Mojib Mohammad</h1>
+          <p class="greeting-message"></p>
+          <h1>I'm Mojib Mohammad</h1>
           <p>
             I'm an Oakland, CA based UX & UI designer focused on crafting clean
             & user-friendly experiences.
@@ -184,7 +176,7 @@
       </section>
 
       <!-- About Section -->
-      <section id="about" class="about" aria-label="about section">
+      <section id="about" class="about">
         <div class="content">
           <h2 class="section-title" aria-label="about me">About Me</h2>
           <div class="flex-container">
@@ -244,9 +236,9 @@
       </section>
 
       <!-- Portfolio Description Section -->
-      <section id="portfolio" class="portfolio" aria-label="portfolio section">
+      <section id="portfolio" class="portfolio">
         <div class="content portfolio-description">
-          <h2 class="section-title" aria-label="portfolio title">Portfolio</h2>
+          <h2 class="section-title">Portfolio</h2>
           <p>
             Below you can see some projects I've been working on lately. I
             divide each project into four follow-up areas: comprehensive
@@ -254,14 +246,14 @@
             to create great product with client goals in mind.
           </p>
         </div>
-        <div class="content filter-btn-container" aria-label="Filter buttons">
+        <div class="content filter-btn-container">
           <div class="filter active" data-category="all">All</div>
           <div class="filter" data-category="javascript">JavaScript</div>
           <div class="filter" data-category="react">React.js</div>
           <div class="filter" data-category="MERN">MERN</div>
           <div class="filter" data-category="PERN">PERN</div>
         </div>
-        <div class="content projects-container" aria-label="Projects container">
+        <div class="content projects-container">
           <div class="card javascript">
             <img alt="Coders Corner" src="images/portfolio/coderscorner.gif" />
             <div class="card-body">
@@ -536,21 +528,10 @@
       <section id="contact" class="contact" aria-label="contact section">
         <div class="content">
           <h2 class="section-title">Contact</h2>
-          <!-- <form
-            class="email-form"
-            action="mailto:mmohammad3@outlook.com"
-            method="POST"
-          >
-            <div class="submit-btn">
-              <p>Connect With Email(by simply clicking send)</p>
-              <button type="submit">Send</button>
-              <h4>OR</h4>
-            </div>
-            <p>Have a question or want to work together?</p>
-          </form> -->
           <p class="have-a-question">
             Have a question or want to work together?
           </p>
+          <div id="snackbar" role="alert"></div>
           <form
             name="contact"
             id="contact-form"
@@ -587,7 +568,6 @@
             <div class="submit-btn">
               <button type="submit">Send</button>
             </div>
-            <div id="snackbar"></div>
           </form>
           <div class="loading">
             <img src="images/icons/loading.gif" alt="loading avatar" />
@@ -598,7 +578,7 @@
 
     <!-- Footer Section -->
     <footer aria-label="footer">
-      <div class="content" aria-label="footer links">
+      <div class="content">
         <p>
           &copy;2020 <span class="copyright-author">Mojib Mohammad</span>. Built
           with a little JavaScript and <i class="fas fa-heart"></i> in Oakland,
@@ -650,7 +630,7 @@
         </button>
       </div>
     </footer>
-    <script defer type="module" src="index.js"></script>
+    <script type="module" src="index.js"></script>
     <script defer src="utilities/filter-projects.js"></script>
     <script defer src="utilities/email.js"></script>
     <script defer src="utilities/theme.js"></script>

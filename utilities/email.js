@@ -15,20 +15,21 @@ async function handleSubmit(event) {
       body: new URLSearchParams(formData).toString(),
     });
     if (res.ok) {
-      showSnack("Form successfully submitted");
+      showSnack("Form successfully submitted", "success");
     }
   } catch (err) {
     console.log(err);
-    showSnack(err);
+    showSnack(err.message, "error");
   }
 }
 
-function showSnack(res) {
+function showSnack(text, type) {
   const snackbar = document.getElementById("snackbar");
   const p = document.createElement("p");
-  p.textContent = res;
+  p.textContent = text;
   snackbar.append(p);
-  snackbar.classList.add("show");
+  if (type === "success") snackbar.classList.add("show success");
+  if (type === "error") snackbar.classList.add("show error");
   setTimeout(() => {
     snackbar.classList.remove("show");
   }, 3000);

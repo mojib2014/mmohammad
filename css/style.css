@@ -191,24 +191,6 @@ h4 {
   font-size: 1.5rem;
 }
 
-/*==============
-  Snackbar 
-===============*/
-#snackbar {
-  background-color: var(--white);
-  border-radius: 5px;
-  visibility: hidden;
-  min-width: 250px;
-  padding: 0.5rem;
-  z-index: 1;
-}
-
-#snackbar.show {
-  visibility: visible;
-  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
-  animation: fadein 0.5s, fadeout 0.5s 2.5s;
-}
-
 /*===============
 @keyframes
 ===============*/

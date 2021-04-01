@@ -76,22 +76,51 @@ textarea {
   transition: all 0.5s linear;
 }
 
-@media only screen and (max-width: 560px) {
-  .submit-btn button {
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-    -webkit-padding-start: 2em;
-    -moz-padding: 2em;
-    -ms-padding: 2em;
-    padding: 2em;
-  }
-}
-
 .loading,
 .portfolio-loading {
   display: none;
   width: 20%;
   margin: 0 auto;
   text-align: center;
+}
+
+/*==============
+  Snackbar 
+===============*/
+#snackbar {
+  background-color: var(--white);
+  border-radius: 5px;
+  visibility: hidden;
+  min-width: 250px;
+  width: auto;
+  padding: 1rem;
+  z-index: 1;
+}
+
+#snackbar.show {
+  visibility: visible;
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+#snackbar .success {
+  background-color: #d4edda;
+  color: #347042;
+}
+
+#snackbar .error {
+  background-color: #f8d7da;
+  color: #91474f;
+}
+
+@media only screen and (max-width: 560px) {
+  .submit-btn button {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    -webkit-padding-start: 2rem;
+    -moz-padding: 2rem;
+    -ms-padding: 2rem;
+    padding: 2rem;
+  }
 }
