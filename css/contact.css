@@ -93,7 +93,9 @@ textarea {
   min-width: 250px;
   max-width: 70%;
   width: 100%;
+  margin: auto;
   padding: 1em;
+  text-align: center;
   z-index: 1;
 }
 
