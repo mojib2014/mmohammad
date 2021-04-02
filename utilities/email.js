@@ -15,12 +15,12 @@ async function handleSubmit(event) {
       body: new URLSearchParams(formData).toString(),
     });
     if (res.ok) {
-      console.log(res.statusText);
-      return showSnack(res.statusText, "success");
+      console.log("res status text", res.statusText);
+      showSnack("Form successfully submited!", "success");
     }
   } catch (err) {
-    console.log(err.message);
-    return showSnack(err.message, "error");
+    console.log("error message", err.message);
+    showSnack(err.message, "error");
   }
 }
 
