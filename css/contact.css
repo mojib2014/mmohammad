@@ -102,12 +102,12 @@ textarea {
   animation: fadein 0.5s, fadeout 0.5s 2.5s;
 }
 
-#snackbar .success {
+.success {
   background-color: #d4edda;
   color: #347042;
 }
 
-#snackbar .error {
+.error {
   background-color: #f8d7da;
   color: #91474f;
 }
