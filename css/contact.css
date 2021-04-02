@@ -91,7 +91,8 @@ textarea {
   border-radius: 5px;
   visibility: hidden;
   min-width: 250px;
-  width: auto;
+  max-width: 70%;
+  width: 100%;
   padding: 1em;
   z-index: 1;
 }

@@ -33,5 +33,5 @@ function showSnack(text, type) {
   if (type === "error") snackbar.classList.add("show", "error");
   setTimeout(() => {
     snackbar.classList.remove("show");
-  }, 5000);
+  }, 7000);
 }
