@@ -88,12 +88,11 @@ textarea {
   Snackbar 
 ===============*/
 #snackbar {
-  background-color: var(--white);
   border-radius: 5px;
   visibility: hidden;
   min-width: 250px;
   width: auto;
-  padding: 1rem;
+  padding: 1em;
   z-index: 1;
 }
 
